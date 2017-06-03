@@ -47,14 +47,14 @@ PID::PID(AnalogIn *feedBack, uint16_t num_samples, uint16_t p, uint16_t i, uint1
 
 uint16_t PID::PID_calc(){
 
-	error = analog_read();
+	error = reference - analog_read();
 	sum += error;
 	slope = error - previous_cycle;
 	previous_cycle = error;
 	duty_cycle = error*p + sum*i + slope*d;
 
-	if(duty_cycle > 65536) {
-		duty_cycle = 65536;
+	if(duty_cycle >= 65536) {
+		duty_cycle = 65535;
 	}
 	else if(duty_cycle < 0) {
 		duty_cycle = 0;
