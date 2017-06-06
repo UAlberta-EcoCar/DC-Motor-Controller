@@ -16,6 +16,7 @@ PID::PID() {
 	i = 0;
 	d = 0;
 	sum = 0;
+	ADC_value = 0;
 	reference = 0;
 	error = 0;
 	slope = 0;
@@ -33,6 +34,7 @@ PID::PID(AnalogIn *feedBack, uint16_t num_samples, uint16_t p, uint16_t i, uint1
 	this->d = d;
 	this->num_samples = num_samples;
 	sum = 0;
+	ADC_value = 0;
 	reference = 0;
 	error = 0;
 	slope = 0;
@@ -47,13 +49,36 @@ PID::PID(AnalogIn *feedBack, uint16_t num_samples, uint16_t p, uint16_t i, uint1
 
 uint16_t PID::PID_calc(){
 
-	error = reference - analog_read();
-	sum += error;
-	slope = error - previous_cycle;
-	previous_cycle = error;
-	duty_cycle = error*p + sum*i + slope*d;
+	ADC_value = analog_read();
+	error = (int32_t)reference - (int32_t)ADC_value;
 
-	if(duty_cycle >= 65536) {
+	//checks for overflow with the sum
+	if((error > 0) && (sum > INT_MAX - error)) {
+		sum = INT_MAX; //saturates sum
+	}
+	else if((error < 0) && (sum < INT_MIN - error)) {
+		sum = INT_MIN; //saturates sum
+	}
+	else {
+		sum += error; //adds error if it does not overflow
+	}
+
+	//checks for overflow with the derivative  (slope = error - previous_cycle)
+	if((previous_cycle < 0) && (error > INT_MAX + previous_cycle)) {
+		slope = INT_MAX; //saturates derivative
+	}
+	else if((previous_cycle > 0) && (error < INT_MIN + previous_cycle)) {
+		slope = INT_MIN; //saturates derivative
+	}
+	else {
+		slope = error - previous_cycle; //calculates slope if the subtraction does not overflow
+	}
+
+	previous_cycle = error;
+
+	duty_cycle = error*p + sum*i + slope*d; //future: add overflow protection here
+
+	if(duty_cycle >= 65536) { //saturates duty cycle at 65535
 		duty_cycle = 65535;
 	}
 	else if(duty_cycle < 0) {
@@ -77,6 +102,8 @@ uint16_t PID::analog_read(){
 void PID::set_reference(uint16_t reference){
 
 	this->reference = reference;
+	sum = 0;						//reset integral term for a new reference
+	previous_cycle = 0;	//reset derivative term for a new reference
 
 }
 

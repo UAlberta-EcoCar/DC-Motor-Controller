@@ -3,6 +3,7 @@
 
 #include "mbed.h"
 #include "rtos.h"
+#include <limits.h>
 
 
 ////////////////////
@@ -14,15 +15,16 @@ class PID {
 
   private:
 
-  	int32_t duty_cycle;
+  	int32_t duty_cycle;    //output to the actuator (eg motor)
   	uint16_t p, i, d;
-  	int32_t sum;
-  	uint16_t reference;
-  	int32_t error;
-  	int32_t slope;
-  	int32_t previous_cycle;
-  	uint16_t num_samples; //max number of samples is 65536
-  	AnalogIn *feedBack;
+    uint16_t ADC_value;
+  	int32_t sum;           //sum for the Integral term
+  	uint16_t reference;    //reference
+  	int32_t error;         //error with respect to the reference, used for calculating the slope
+  	int32_t slope;         //used for the Derivative term
+  	int32_t previous_cycle;//previous error value, used to calculate the Derivative term
+  	uint16_t num_samples;  //number of ADC samples per cycle
+  	AnalogIn *feedBack;    //ADC object used for feedback, eg a current sensor
 
   public:
 
