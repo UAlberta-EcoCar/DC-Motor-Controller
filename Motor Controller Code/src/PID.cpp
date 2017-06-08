@@ -52,31 +52,32 @@ uint16_t PID::PID_calc(){
 	ADC_value = analog_read();
 	error = (int32_t)reference - (int32_t)ADC_value;
 
-	//checks for overflow with the sum
-	if((error > 0) && (sum > INT_MAX - error)) {
-		sum = INT_MAX; //saturates sum
+	//saturates the integral sum, to prevent overflow
+	if((error > 0) && (sum > (INT_MAX / 3) - error)) {
+		sum = INT_MAX / 3; //saturates sum
 	}
-	else if((error < 0) && (sum < INT_MIN - error)) {
-		sum = INT_MIN; //saturates sum
+	else if((error < 0) && (sum < (INT_MIN / 3) - error)) {
+		sum = INT_MIN / 3; //saturates sum
 	}
 	else {
-		sum += error; //adds error if it does not overflow
+		sum += error; //add error to the sum, if there is no saturation
 	}
 
-	//checks for overflow with the derivative  (slope = error - previous_cycle)
-	if((previous_cycle < 0) && (error > INT_MAX + previous_cycle)) {
-		slope = INT_MAX; //saturates derivative
+	//saturates the derivative term  (slope = error - previous_cycle)
+	if((previous_cycle < 0) && (error > (INT_MAX / 3) + previous_cycle)) {
+		slope = INT_MAX / 3; //saturates derivative
 	}
-	else if((previous_cycle > 0) && (error < INT_MIN + previous_cycle)) {
-		slope = INT_MIN; //saturates derivative
+	else if((previous_cycle > 0) && (error < (INT_MIN / 3) + previous_cycle)) {
+		slope = INT_MIN / 3; //saturates derivative
 	}
 	else {
-		slope = error - previous_cycle; //calculates slope if the subtraction does not overflow
+		slope = error - previous_cycle; //calculates slope, if there is no saturation
 	}
 
 	previous_cycle = error;
 
-	duty_cycle = error*p + sum*i + slope*d; //future: add overflow protection here
+	duty_cycle = error*p + sum*i + slope*d; //note: overflow protected
+																					//error, sum, and slope saturate at Max Int / 3
 
 	if(duty_cycle >= 65536) { //saturates duty cycle at 65535
 		duty_cycle = 65535;
