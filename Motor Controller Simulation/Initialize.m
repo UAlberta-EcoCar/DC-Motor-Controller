@@ -1,0 +1,30 @@
+targetVelocity = 300;
+P_Velocity = 1;
+I_Velocity = 1;
+D_Velocity = 0;
+P_Current = 1;
+I_Current = 1;
+D_Current = 0;
+
+switchingFrequency = 5000; 
+sampleRate = 1000;
+maxVoltage = 25;
+maxCurrent = 30;
+maxVelocity = 1000;
+supplyVoltage = 25;
+currentSensorResistance = 0.001;
+motorResistance = 1;
+motorInductance = 0.0001;
+torqueConstant = 1;
+dampingCoefficient = 0;
+motorInertia = 1;
+driverResistance = 1;
+gateDrainCapacitance = 0.000001;
+gateSourceCapacitance = 0.000001;
+drainSourceCapacitance = 0.0000001;
+gm = 1 / 0.0013;
+mosfetGateResistance = 1;
+gateVoltage = 15;
+simTime = 10;
+
+switchingPeriod = 1/switchingFrequency;
