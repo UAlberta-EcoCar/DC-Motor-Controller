@@ -9,6 +9,20 @@
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
@@ -190,6 +204,38 @@ by exp-lbrs.ulp</description>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
+<symbol name="FRAME_A_L">
+<frame x1="0" y1="0" x2="279.4" y2="215.9" columns="6" rows="5" layer="94" border-bottom="no"/>
+</symbol>
+<symbol name="DOCFIELD">
+<wire x1="0" y1="0" x2="71.12" y2="0" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="15.24" x2="87.63" y2="15.24" width="0.1016" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="0" y1="5.08" x2="71.12" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="0" y1="5.08" x2="0" y2="15.24" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="15.24" x2="101.6" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="71.12" y1="5.08" x2="71.12" y2="0" width="0.1016" layer="94"/>
+<wire x1="71.12" y1="5.08" x2="87.63" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="71.12" y1="0" x2="101.6" y2="0" width="0.1016" layer="94"/>
+<wire x1="87.63" y1="15.24" x2="87.63" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="87.63" y1="15.24" x2="0" y2="15.24" width="0.1016" layer="94"/>
+<wire x1="87.63" y1="5.08" x2="101.6" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="5.08" x2="101.6" y2="0" width="0.1016" layer="94"/>
+<wire x1="0" y1="15.24" x2="0" y2="22.86" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="35.56" x2="0" y2="35.56" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="35.56" x2="101.6" y2="22.86" width="0.1016" layer="94"/>
+<wire x1="0" y1="22.86" x2="101.6" y2="22.86" width="0.1016" layer="94"/>
+<wire x1="0" y1="22.86" x2="0" y2="35.56" width="0.1016" layer="94"/>
+<wire x1="101.6" y1="22.86" x2="101.6" y2="15.24" width="0.1016" layer="94"/>
+<text x="1.27" y="1.27" size="2.54" layer="94" font="vector">Date:</text>
+<text x="12.7" y="1.27" size="2.54" layer="94" font="vector">&gt;LAST_DATE_TIME</text>
+<text x="72.39" y="1.27" size="2.54" layer="94" font="vector">Sheet:</text>
+<text x="86.36" y="1.27" size="2.54" layer="94" font="vector">&gt;SHEET</text>
+<text x="88.9" y="11.43" size="2.54" layer="94" font="vector">REV:</text>
+<text x="1.27" y="19.05" size="2.54" layer="94" font="vector">TITLE:</text>
+<text x="1.27" y="11.43" size="2.54" layer="94" font="vector">Document Number:</text>
+<text x="17.78" y="19.05" size="2.54" layer="94" font="vector">&gt;DRAWING_NAME</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" prefix="GND">
@@ -199,6 +245,74 @@ by exp-lbrs.ulp</description>
 </gates>
 <devices>
 <device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FRAME_A_L" prefix="FRAME" uservalue="yes">
+<description>&lt;b&gt;FRAME&lt;/b&gt; A Size , 8 1/2 x 11 INCH, Landscape&lt;p&gt;</description>
+<gates>
+<gate name="G$1" symbol="FRAME_A_L" x="0" y="0" addlevel="always"/>
+<gate name="G$2" symbol="DOCFIELD" x="172.72" y="0" addlevel="always"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="MotorControllerEagleLibrary">
+<packages>
+<package name="DNF5">
+<smd name="DRAIN" x="0" y="0.935" dx="4.53" dy="7" layer="1" rot="R90"/>
+<smd name="GATE" x="2.53" y="-3.3" dx="2" dy="2" layer="1"/>
+<smd name="SOURCE" x="-1.29" y="-3.3" dx="4.5" dy="2" layer="1"/>
+<wire x1="-5" y1="-4.33" x2="-5" y2="3.48" width="0.01" layer="21"/>
+<wire x1="-5" y1="3.48" x2="5" y2="3.48" width="0.01" layer="21"/>
+<wire x1="5" y1="3.48" x2="5" y2="-4.33" width="0.01" layer="21"/>
+<wire x1="5" y1="-4.33" x2="-5" y2="-4.33" width="0.01" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="NMOS">
+<wire x1="0" y1="-3.175" x2="2.54" y2="-3.175" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-3.175" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="1.27" y2="-0.635" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="1.27" y2="0.635" width="0.254" layer="94"/>
+<wire x1="0" y1="-4.445" x2="0" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="0" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="1.905" x2="0" y2="3.175" width="0.254" layer="94"/>
+<wire x1="0" y1="3.175" x2="0" y2="4.445" width="0.254" layer="94"/>
+<wire x1="0" y1="3.175" x2="2.54" y2="3.175" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-5.08" x2="-1.27" y2="4.445" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="4.826" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-3.175" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="3.175" x2="2.54" y2="5.08" width="0.254" layer="94"/>
+<pin name="SOURCE\" x="2.54" y="-5.08" visible="pin" length="point"/>
+<pin name="GATE" x="-5.08" y="-5.08" visible="pin" length="point" rot="R180"/>
+<pin name="DRAIN" x="2.54" y="5.08" visible="pin" length="point"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="NTMFS5C426NT1G">
+<gates>
+<gate name="G$1" symbol="NMOS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DNF5">
+<connects>
+<connect gate="G$1" pin="DRAIN" pad="DRAIN"/>
+<connect gate="G$1" pin="GATE" pad="GATE"/>
+<connect gate="G$1" pin="SOURCE\" pad="SOURCE"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -219,9 +333,16 @@ by exp-lbrs.ulp</description>
 <parts>
 <part name="FRAME1" library="frames" deviceset="FRAME_A_L" device=""/>
 <part name="GND1" library="E-P-008-R1.2" deviceset="GND" device=""/>
+<part name="FRAME2" library="E-P-008-R1.2" deviceset="FRAME_A_L" device=""/>
+<part name="U$1" library="MotorControllerEagleLibrary" deviceset="NTMFS5C426NT1G" device=""/>
+<part name="U$2" library="MotorControllerEagleLibrary" deviceset="NTMFS5C426NT1G" device=""/>
+<part name="U$3" library="MotorControllerEagleLibrary" deviceset="NTMFS5C426NT1G" device=""/>
+<part name="U$4" library="MotorControllerEagleLibrary" deviceset="NTMFS5C426NT1G" device=""/>
+<part name="GND2" library="E-P-008-R1.2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
+<description>Main Board Topology</description>
 <plain>
 <text x="114.3" y="182.88" size="1.778" layer="91">Current Sensor</text>
 <text x="81.28" y="147.32" size="1.778" layer="91">Small Capacitor Bank</text>
@@ -288,6 +409,10 @@ Enable Coast</text>
 <text x="40.64" y="88.9" size="1.778" layer="94">FROM TEENSY</text>
 <text x="175.26" y="30.48" size="2.286" layer="94">Motor Controller Topology</text>
 <text x="175.26" y="25.4" size="2.286" layer="94">Keep it looking neat. Use other sheets to make complicated circuits</text>
+<text x="40.64" y="114.3" size="1.778" layer="94">For Future
+revision</text>
+<text x="121.92" y="137.16" size="1.778" layer="94">For Future
+revision</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -316,14 +441,34 @@ Enable Coast</text>
 </net>
 <net name="MOTOR_OUTPUT_(+)" class="0">
 <segment>
-<wire x1="139.7" y1="147.32" x2="154.94" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="147.32" x2="147.32" y2="147.32" width="0.1524" layer="91"/>
 <label x="157.48" y="147.32" size="1.778" layer="95"/>
+<wire x1="147.32" y1="147.32" x2="154.94" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="147.32" x2="114.3" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="147.32" x2="111.76" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="147.32" x2="111.76" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="134.62" x2="147.32" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="134.62" x2="147.32" y2="147.32" width="0.1524" layer="91"/>
+<junction x="147.32" y="147.32"/>
+<junction x="111.76" y="147.32"/>
 </segment>
 </net>
 <net name="MOTOR_OUTPUT_(--)" class="0">
 <segment>
-<wire x1="22.86" y1="106.68" x2="35.56" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="106.68" x2="30.48" y2="106.68" width="0.1524" layer="91"/>
 <label x="10.16" y="109.22" size="1.778" layer="95"/>
+<wire x1="30.48" y1="106.68" x2="35.56" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="106.68" x2="30.48" y2="86.36" width="0.1524" layer="91"/>
+<junction x="30.48" y="106.68"/>
+<wire x1="25.4" y1="134.62" x2="25.4" y2="127" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="127" x2="76.2" y2="127" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="127" x2="76.2" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="109.22" x2="76.2" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="109.22" x2="91.44" y2="109.22" width="0.1524" layer="91"/>
+<junction x="76.2" y="109.22"/>
+<wire x1="30.48" y1="86.36" x2="76.2" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="86.36" x2="76.2" y2="109.22" width="0.1524" layer="91"/>
+<label x="78.74" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MAIN_POWER_IN(+)" class="0">
@@ -374,11 +519,6 @@ Enable Coast</text>
 <label x="124.46" y="195.58" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$1" class="0">
-<segment>
-<wire x1="106.68" y1="147.32" x2="114.3" y2="147.32" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="COAST_ENABLE" class="0">
 <segment>
 <wire x1="127" y1="152.4" x2="127" y2="157.48" width="0.1524" layer="91"/>
@@ -389,14 +529,97 @@ Enable Coast</text>
 <label x="40.64" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+</nets>
+</sheet>
+<sheet>
+<description>MOSFET NETWORK</description>
+<plain>
+<text x="180.34" y="27.94" size="5.08" layer="94">POWER MOSFETS</text>
+</plain>
+<instances>
+<instance part="FRAME2" gate="G$1" x="0" y="0"/>
+<instance part="FRAME2" gate="G$2" x="172.72" y="0"/>
+<instance part="U$1" gate="G$1" x="137.16" y="175.26"/>
+<instance part="U$2" gate="G$1" x="137.16" y="137.16"/>
+<instance part="U$3" gate="G$1" x="137.16" y="101.6"/>
+<instance part="U$4" gate="G$1" x="137.16" y="60.96"/>
+<instance part="GND2" gate="1" x="187.96" y="154.94"/>
+</instances>
+<busses>
+</busses>
+<nets>
+<net name="FET_DRIVER_SIGNAL" class="0">
 <segment>
-<wire x1="25.4" y1="134.62" x2="25.4" y2="127" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="127" x2="76.2" y2="127" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="127" x2="76.2" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="109.22" x2="76.2" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="109.22" x2="91.44" y2="109.22" width="0.1524" layer="91"/>
-<junction x="76.2" y="109.22"/>
+<pinref part="U$1" gate="G$1" pin="GATE"/>
+<wire x1="132.08" y1="170.18" x2="132.08" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="165.1" x2="114.3" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="165.1" x2="114.3" y2="127" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="GATE"/>
+<wire x1="114.3" y1="127" x2="132.08" y2="127" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="127" x2="132.08" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="127" x2="114.3" y2="91.44" width="0.1524" layer="91"/>
+<junction x="114.3" y="127"/>
+<pinref part="U$3" gate="G$1" pin="GATE"/>
+<wire x1="114.3" y1="91.44" x2="132.08" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="91.44" x2="132.08" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="91.44" x2="114.3" y2="50.8" width="0.1524" layer="91"/>
+<junction x="114.3" y="91.44"/>
+<pinref part="U$4" gate="G$1" pin="GATE"/>
+<wire x1="114.3" y1="50.8" x2="132.08" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="50.8" x2="132.08" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="165.1" x2="91.44" y2="165.1" width="0.1524" layer="91"/>
+<junction x="114.3" y="165.1"/>
+<label x="93.98" y="167.64" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="MOTOR_OUTPUT_(--)" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="DRAIN"/>
+<wire x1="139.7" y1="180.34" x2="139.7" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="185.42" x2="160.02" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="185.42" x2="160.02" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="DRAIN"/>
+<wire x1="160.02" y1="147.32" x2="139.7" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="147.32" x2="139.7" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="147.32" x2="160.02" y2="111.76" width="0.1524" layer="91"/>
+<junction x="160.02" y="147.32"/>
+<pinref part="U$3" gate="G$1" pin="DRAIN"/>
+<wire x1="160.02" y1="111.76" x2="139.7" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="111.76" x2="139.7" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="111.76" x2="160.02" y2="71.12" width="0.1524" layer="91"/>
+<junction x="160.02" y="111.76"/>
+<pinref part="U$4" gate="G$1" pin="DRAIN"/>
+<wire x1="160.02" y1="71.12" x2="139.7" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="71.12" x2="139.7" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="185.42" x2="177.8" y2="185.42" width="0.1524" layer="91"/>
+<junction x="160.02" y="185.42"/>
+<label x="160.02" y="187.96" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GND" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="SOURCE\"/>
+<wire x1="139.7" y1="170.18" x2="139.7" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="165.1" x2="170.18" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="165.1" x2="170.18" y2="127" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="SOURCE\"/>
+<wire x1="170.18" y1="127" x2="139.7" y2="127" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="127" x2="139.7" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="127" x2="170.18" y2="91.44" width="0.1524" layer="91"/>
+<junction x="170.18" y="127"/>
+<pinref part="U$3" gate="G$1" pin="SOURCE\"/>
+<wire x1="170.18" y1="91.44" x2="139.7" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="91.44" x2="139.7" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="91.44" x2="170.18" y2="50.8" width="0.1524" layer="91"/>
+<junction x="170.18" y="91.44"/>
+<pinref part="U$4" gate="G$1" pin="SOURCE\"/>
+<wire x1="170.18" y1="50.8" x2="139.7" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="50.8" x2="139.7" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="165.1" x2="187.96" y2="165.1" width="0.1524" layer="91"/>
+<junction x="170.18" y="165.1"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<wire x1="187.96" y1="165.1" x2="187.96" y2="157.48" width="0.1524" layer="91"/>
+<label x="177.8" y="167.64" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
