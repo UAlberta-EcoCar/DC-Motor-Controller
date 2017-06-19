@@ -2,6 +2,7 @@
 #include "rtos.h"
 #include "PID.hpp"
 #include <stdint.h>
+#include <math.h>
 
 ///////////////////////
 //PID class definitions
@@ -26,7 +27,7 @@ PID::PID() {
 
 }
 
-PID::PID(AnalogIn *feedBack, uint16_t num_samples, uint16_t p, uint16_t i, uint16_t d) {
+PID::PID(AnalogIn *feedBack, uint16_t num_samples, float p, float i, float d) {
 
 	this->feedBack = feedBack;
 	this->p = p;
@@ -53,22 +54,22 @@ uint16_t PID::PID_calc(){
 	error = (int32_t)reference - (int32_t)ADC_value;
 
 	//saturates the integral sum, to prevent overflow
-	if((error > 0) && (sum > (INT_MAX / 3) - error)) {
-		sum = INT_MAX / 3; //saturates sum
+	if((error > 0) && (sum > INT_MAX - error)) {
+		sum = INT_MAX; //saturates sum
 	}
-	else if((error < 0) && (sum < (INT_MIN / 3) - error)) {
-		sum = INT_MIN / 3; //saturates sum
+	else if((error < 0) && (sum < INT_MIN - error)) {
+		sum = INT_MIN; //saturates sum
 	}
 	else {
 		sum += error; //add error to the sum, if there is no saturation
 	}
 
 	//saturates the derivative term  (slope = error - previous_cycle)
-	if((previous_cycle < 0) && (error > (INT_MAX / 3) + previous_cycle)) {
-		slope = INT_MAX / 3; //saturates derivative
+	if((previous_cycle < 0) && (error > INT_MAX + previous_cycle)) {
+		slope = INT_MAX; //saturates derivative
 	}
-	else if((previous_cycle > 0) && (error < (INT_MIN / 3) + previous_cycle)) {
-		slope = INT_MIN / 3; //saturates derivative
+	else if((previous_cycle > 0) && (error < INT_MIN + previous_cycle)) {
+		slope = INT_MIN; //saturates derivative
 	}
 	else {
 		slope = error - previous_cycle; //calculates slope, if there is no saturation
@@ -76,8 +77,7 @@ uint16_t PID::PID_calc(){
 
 	previous_cycle = error;
 
-	duty_cycle = error*p + sum*i + slope*d; //note: overflow protected
-																					//error, sum, and slope saturate at Max Int / 3
+	duty_cycle = round(error*p + sum*i + slope*d); //note: overflow protected
 
 	if(duty_cycle >= 65536) { //saturates duty cycle at 65535
 		duty_cycle = 65535;
@@ -114,19 +114,19 @@ void PID::set_feedBack(AnalogIn *feedBack){
 
 }
 
-void PID::set_p(uint16_t p){
+void PID::set_p(float p){
 
 	this->p = p;
 
 }
 
-void PID::set_i(uint16_t i){
+void PID::set_i(float i){
 
 	this->i = i;
 
 }
 
-void PID::set_d(uint16_t d){
+void PID::set_d(float d){
 
 	this->d = d;
 

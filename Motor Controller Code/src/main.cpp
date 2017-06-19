@@ -2,6 +2,7 @@
 #include "rtos.h"
 #include "USBSerial.h"
 #include "PID.hpp"
+#include "current_PID.hpp"
 
 int main(){
 
@@ -13,7 +14,7 @@ int main(){
   PwmOut output(PTD5);           //pwm output to motor driver
   output.period_us(200);         //sets period
   USBSerial serial;              //serial for debugging
-  PID current_control(&current_sensor, 128, 1 , 1, 0); //Parameters: feedback, samples, P, I, D
+  PID current_control(&current_sensor, 128, 0.1 , 0.1, 0); //Parameters: feedback, samples, P, I, D
   current_control.set_reference(22640); //corresponds to 200mA
 
   while(true) {
