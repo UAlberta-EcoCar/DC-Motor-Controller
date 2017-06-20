@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -296,6 +296,10 @@ by exp-lbrs.ulp</description>
 <wire x1="5" y1="3.48" x2="5" y2="-4.33" width="0.01" layer="21"/>
 <wire x1="5" y1="-4.33" x2="-5" y2="-4.33" width="0.01" layer="21"/>
 </package>
+<package name="TO">
+<smd name="CATHODE" x="0" y="0" dx="10.7" dy="11.4" layer="1"/>
+<smd name="ANODE" x="0" y="-8.6" dx="10.7" dy="4.13" layer="1" rot="R180"/>
+</package>
 </packages>
 <symbols>
 <symbol name="NMOS">
@@ -318,6 +322,19 @@ by exp-lbrs.ulp</description>
 <pin name="GATE" x="-5.08" y="-5.08" visible="pin" length="point" rot="R180"/>
 <pin name="DRAIN" x="2.54" y="5.08" visible="pin" length="point"/>
 </symbol>
+<symbol name="DIODE">
+<wire x1="-2.54" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="3.175" y2="0" width="0.254" layer="94"/>
+<wire x1="3.175" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="3.175" y1="2.54" x2="3.175" y2="0" width="0.254" layer="94"/>
+<wire x1="3.175" y1="0" x2="3.175" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="3.175" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<pin name="ANODE" x="-2.54" y="0" visible="off" length="point" rot="R180"/>
+<pin name="CATHODE" x="5.08" y="0" visible="off" length="point" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="NTMFS5C426NT1G">
@@ -330,6 +347,22 @@ by exp-lbrs.ulp</description>
 <connect gate="G$1" pin="DRAIN" pad="DRAIN"/>
 <connect gate="G$1" pin="GATE" pad="GATE"/>
 <connect gate="G$1" pin="SOURCE\" pad="SOURCE"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FLYBACK">
+<gates>
+<gate name="G$1" symbol="DIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TO">
+<connects>
+<connect gate="G$1" pin="ANODE" pad="ANODE"/>
+<connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -7454,6 +7487,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="FRAME6" library="E-P-008-R1.2" deviceset="FRAME_A_L" device=""/>
 <part name="FRAME7" library="E-P-008-R1.2" deviceset="FRAME_A_L" device=""/>
 <part name="T1" library="Teensy_3_and_LC_Series_Boards_v1.1" deviceset="TEENSY_3.1_ALL_PINS" device=""/>
+<part name="U$5" library="MotorControllerEagleLibrary" deviceset="FLYBACK" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7471,11 +7505,11 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="109.22" y1="187.96" x2="139.7" y2="187.96" width="0.1524" layer="94"/>
 <wire x1="139.7" y1="187.96" x2="139.7" y2="177.8" width="0.1524" layer="94"/>
 <wire x1="139.7" y1="177.8" x2="109.22" y2="177.8" width="0.1524" layer="94"/>
-<text x="17.78" y="137.16" size="1.778" layer="91">Flyback Diode</text>
-<wire x1="12.7" y1="134.62" x2="38.1" y2="134.62" width="0.1524" layer="94"/>
-<wire x1="38.1" y1="134.62" x2="38.1" y2="142.24" width="0.1524" layer="94"/>
-<wire x1="38.1" y1="142.24" x2="12.7" y2="142.24" width="0.1524" layer="94"/>
-<wire x1="12.7" y1="142.24" x2="12.7" y2="134.62" width="0.1524" layer="94"/>
+<text x="10.16" y="132.08" size="1.778" layer="91" rot="R90">Flyback Diode</text>
+<wire x1="12.7" y1="132.08" x2="38.1" y2="132.08" width="0.1524" layer="94"/>
+<wire x1="38.1" y1="132.08" x2="38.1" y2="144.78" width="0.1524" layer="94"/>
+<wire x1="38.1" y1="144.78" x2="12.7" y2="144.78" width="0.1524" layer="94"/>
+<wire x1="12.7" y1="144.78" x2="12.7" y2="132.08" width="0.1524" layer="94"/>
 <text x="96.52" y="109.22" size="1.778" layer="91">MOSFET NETWORK</text>
 <wire x1="91.44" y1="114.3" x2="91.44" y2="104.14" width="0.1524" layer="94"/>
 <wire x1="91.44" y1="104.14" x2="121.92" y2="104.14" width="0.1524" layer="94"/>
@@ -7526,6 +7560,7 @@ revision</text>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="172.72" y="0"/>
 <instance part="GND1" gate="1" x="147.32" y="101.6"/>
+<instance part="U$5" gate="G$1" x="25.4" y="137.16" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -7552,6 +7587,7 @@ revision</text>
 <wire x1="30.48" y1="86.36" x2="76.2" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="86.36" x2="76.2" y2="109.22" width="0.1524" layer="91"/>
 <label x="78.74" y="119.38" size="1.778" layer="95"/>
+<pinref part="U$5" gate="G$1" pin="ANODE"/>
 </segment>
 </net>
 <net name="MAIN_POWER_IN(+)" class="0">
@@ -7560,8 +7596,9 @@ revision</text>
 <wire x1="12.7" y1="182.88" x2="25.4" y2="182.88" width="0.1524" layer="91"/>
 <label x="12.7" y="185.42" size="1.778" layer="95"/>
 <wire x1="25.4" y1="182.88" x2="55.88" y2="182.88" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="142.24" x2="25.4" y2="182.88" width="0.1524" layer="91"/>
 <junction x="25.4" y="182.88"/>
+<wire x1="25.4" y1="142.24" x2="25.4" y2="182.88" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="CATHODE"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -7862,6 +7899,20 @@ revision</text>
 </nets>
 </sheet>
 <sheet>
+<description>Circuit Protection</description>
+<plain>
+<text x="195.58" y="27.94" size="3.81" layer="94">CIRCUIT PROTECTION</text>
+</plain>
+<instances>
+<instance part="FRAME7" gate="G$1" x="0" y="0"/>
+<instance part="FRAME7" gate="G$2" x="172.72" y="0"/>
+</instances>
+<busses>
+</busses>
+<nets>
+</nets>
+</sheet>
+<sheet>
 <description>Teensy</description>
 <plain>
 <text x="203.2" y="25.4" size="3.81" layer="94">TEENSY 3.2
@@ -7871,20 +7922,6 @@ CONNECTIONS</text>
 <instance part="FRAME6" gate="G$1" x="0" y="0"/>
 <instance part="FRAME6" gate="G$2" x="172.72" y="0"/>
 <instance part="T1" gate="G$1" x="139.7" y="134.62"/>
-</instances>
-<busses>
-</busses>
-<nets>
-</nets>
-</sheet>
-<sheet>
-<description>Circuit Protection</description>
-<plain>
-<text x="195.58" y="27.94" size="3.81" layer="94">CIRCUIT PROTECTION</text>
-</plain>
-<instances>
-<instance part="FRAME7" gate="G$1" x="0" y="0"/>
-<instance part="FRAME7" gate="G$2" x="172.72" y="0"/>
 </instances>
 <busses>
 </busses>
