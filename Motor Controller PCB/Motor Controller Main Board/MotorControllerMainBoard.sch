@@ -93,7 +93,10 @@
 <layer number="114" name="Badge_Outline" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="115" name="ReferenceISLANDS" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="117" name="BACKMAAT1" color="7" fill="1" visible="no" active="no"/>
 <layer number="118" name="Rect_Pads" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="119" name="KAP_TEKEN" color="7" fill="1" visible="no" active="no"/>
+<layer number="120" name="KAP_MAAT1" color="7" fill="1" visible="no" active="no"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
@@ -103,8 +106,10 @@
 <layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="130" name="SMDSTROOK" color="7" fill="1" visible="no" active="no"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="133" name="bottom_silk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="150" name="Notes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
@@ -462,6 +467,44 @@ by exp-lbrs.ulp</description>
 <text x="-7.5692" y="-10.2362" size="1.27" layer="21" ratio="6" rot="SR0">*</text>
 <text x="-3.2766" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
 </package>
+<package name="INDUCTOR_SMD_FOOTPRINT">
+<smd name="1" x="2.8" y="1.5" dx="5.6" dy="3" layer="1"/>
+<smd name="2" x="2.8" y="11" dx="5.6" dy="3" layer="1"/>
+<wire x1="-3.2" y1="0.5" x2="8.8" y2="0.5" width="0.1" layer="23"/>
+<wire x1="8.8" y1="0.5" x2="8.8" y2="12" width="0.1" layer="23"/>
+<wire x1="8.8" y1="12" x2="-3.2" y2="12" width="0.1" layer="23"/>
+<wire x1="-3.2" y1="12" x2="-3.2" y2="0.5" width="0.1" layer="23"/>
+<text x="-1.27" y="15.24" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="SOD3715X135N">
+<wire x1="-1.35" y1="0.8" x2="1.35" y2="0.8" width="0.2" layer="21"/>
+<wire x1="1.35" y1="0.8" x2="1.35" y2="-0.8" width="0.2" layer="51"/>
+<wire x1="1.35" y1="-0.8" x2="-1.35" y2="-0.8" width="0.2" layer="21"/>
+<wire x1="-1.35" y1="-0.8" x2="-1.35" y2="0.8" width="0.2" layer="51"/>
+<circle x="-2.3" y="0.875" radius="0.1" width="0.2" layer="21"/>
+<wire x1="-2.55" y1="1.1" x2="2.55" y2="1.1" width="0.05" layer="39"/>
+<wire x1="2.55" y1="1.1" x2="2.55" y2="-1.1" width="0.05" layer="39"/>
+<wire x1="2.55" y1="-1.1" x2="-2.55" y2="-1.1" width="0.05" layer="39"/>
+<wire x1="-2.55" y1="-1.1" x2="-2.55" y2="1.1" width="0.05" layer="39"/>
+<text x="-2.625" y="1.125" size="1.016" layer="25">&gt;NAME</text>
+<text x="-2.625" y="-2.125" size="1.016" layer="27">&gt;VALUE</text>
+<smd name="C" x="-1.8" y="0" dx="1" dy="0.75" layer="1"/>
+<smd name="A" x="1.8" y="0" dx="1" dy="0.75" layer="1"/>
+</package>
+<package name="CAP_PAN_10X16">
+<pad name="1" x="-5.0038" y="0" drill="0.9144" diameter="1.4224" shape="square"/>
+<pad name="2" x="0" y="0" drill="0.9144" diameter="1.4224" rot="R180"/>
+<wire x1="-9.271" y1="0" x2="-8.001" y2="0" width="0.1524" layer="21"/>
+<wire x1="-8.636" y1="0.635" x2="-8.636" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="2.8702" y1="0" x2="-7.874" y2="0" width="0.1524" layer="21" curve="-180"/>
+<wire x1="-7.874" y1="0" x2="2.8702" y2="0" width="0.1524" layer="21" curve="-180"/>
+<wire x1="-9.271" y1="0" x2="-8.001" y2="0" width="0.1524" layer="51"/>
+<wire x1="-8.636" y1="0.635" x2="-8.636" y2="-0.635" width="0.1524" layer="51"/>
+<wire x1="2.7432" y1="0" x2="-7.747" y2="0" width="0" layer="51" curve="-180"/>
+<wire x1="-7.747" y1="0" x2="2.7432" y2="0" width="0" layer="51" curve="-180"/>
+<text x="-5.7658" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+</package>
 </packages>
 <symbols>
 <symbol name="NMOS">
@@ -496,6 +539,56 @@ by exp-lbrs.ulp</description>
 <wire x1="3.175" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
 <pin name="ANODE" x="-2.54" y="0" visible="off" length="point" rot="R180"/>
 <pin name="CATHODE" x="5.08" y="0" visible="off" length="point" rot="R180"/>
+</symbol>
+<symbol name="INDUCTOR_SYMBOL">
+<pin name="+" x="7.62" y="0" length="middle" rot="R180"/>
+<pin name="-" x="-7.62" y="0" length="middle"/>
+<wire x1="-2.54" y1="0" x2="-1.27" y2="0" width="0.254" layer="94" curve="-180"/>
+<wire x1="-1.27" y1="0" x2="0" y2="0" width="0.254" layer="94" curve="-180"/>
+<wire x1="0" y1="0" x2="1.27" y2="0" width="0.254" layer="94" curve="-180"/>
+<wire x1="1.27" y1="0" x2="2.54" y2="0" width="0.254" layer="94" curve="-180"/>
+<text x="-2.54" y="1.27" size="1.27" layer="95" ratio="10">&gt;NAME</text>
+<text x="-2.54" y="-2.54" size="1.27" layer="96" ratio="10">&gt;VALUE</text>
+</symbol>
+<symbol name="1N5819_SYMBOL">
+<wire x1="-1.27" y1="-1.27" x2="1.016" y2="0" width="0.254" layer="94"/>
+<wire x1="1.016" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.651" y1="1.27" x2="1.016" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.016" y1="1.27" x2="1.016" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.016" y1="0" x2="1.016" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.651" y1="1.27" x2="1.651" y2="1.016" width="0.254" layer="94"/>
+<wire x1="1.016" y1="-1.27" x2="0.381" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0.381" y1="-1.016" x2="0.381" y2="-1.27" width="0.254" layer="94"/>
+<text x="2.54" y="0.635" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-1.905" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<pin name="K" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="CAPH">
+<pin name="22" x="7.62" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="11" x="0" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<wire x1="3.4798" y1="-1.905" x2="3.4798" y2="0" width="0.2032" layer="94"/>
+<wire x1="3.4798" y1="0" x2="3.4798" y2="1.905" width="0.2032" layer="94"/>
+<wire x1="4.1148" y1="-1.905" x2="4.1148" y2="0" width="0.2032" layer="94"/>
+<wire x1="4.1148" y1="0" x2="4.1148" y2="1.905" width="0.2032" layer="94"/>
+<wire x1="4.1148" y1="0" x2="5.08" y2="0" width="0.2032" layer="94"/>
+<wire x1="2.54" y1="0" x2="3.4798" y2="0" width="0.2032" layer="94"/>
+<text x="-5.1562" y="-5.5372" size="3.4798" layer="96" ratio="10" rot="SR0">&gt;Value</text>
+<text x="-4.0894" y="2.0828" size="3.4798" layer="95" ratio="10" rot="SR0">&gt;Name</text>
+</symbol>
+<symbol name="TL2575HV-15_KTT_5">
+<pin name="VIN" x="2.54" y="0" length="middle" direction="in"/>
+<pin name="OUTPUT" x="2.54" y="-2.54" length="middle" direction="out"/>
+<pin name="GND" x="2.54" y="-5.08" length="middle" direction="pwr"/>
+<pin name="FEEDBACK" x="38.1" y="-5.08" length="middle" direction="pas" rot="R180"/>
+<pin name="!ON/OFF" x="38.1" y="-2.54" length="middle" direction="pas" rot="R180"/>
+<pin name="EPAD" x="38.1" y="0" length="middle" direction="pas" rot="R180"/>
+<wire x1="7.62" y1="5.08" x2="7.62" y2="-10.16" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="33.02" y2="-10.16" width="0.1524" layer="94"/>
+<wire x1="33.02" y1="-10.16" x2="33.02" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="33.02" y1="5.08" x2="7.62" y2="5.08" width="0.1524" layer="94"/>
+<text x="10.1346" y="2.5146" size="2.0828" layer="96" ratio="6" rot="SR0">&gt;Value</text>
 </symbol>
 <symbol name="TL2575-05_KTT_5">
 <pin name="VIN" x="2.54" y="0" length="middle" direction="in"/>
@@ -541,6 +634,114 @@ by exp-lbrs.ulp</description>
 </connects>
 <technologies>
 <technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PA4320" uservalue="yes">
+<description>Pulse Inductor, Digikey number 553-3685-1-ND.</description>
+<gates>
+<gate name="PA4320_INDUCTOR" symbol="INDUCTOR_SYMBOL" x="-1" y="0.8"/>
+</gates>
+<devices>
+<device name="" package="INDUCTOR_SMD_FOOTPRINT">
+<connects>
+<connect gate="PA4320_INDUCTOR" pin="+" pad="1"/>
+<connect gate="PA4320_INDUCTOR" pin="-" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="1N5819">
+<gates>
+<gate name="G$1" symbol="1N5819_SYMBOL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOD3715X135N">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="EEUFR1H221B" prefix="C">
+<description>Panasonic Capacitor, Digikey number P15375CT-ND</description>
+<gates>
+<gate name="A" symbol="CAPH" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="CAP_PAN_10X16">
+<connects>
+<connect gate="A" pin="11" pad="1"/>
+<connect gate="A" pin="22" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MANUFACTURER_PART_NUMBER" value="EEUFR1H221B" constant="no"/>
+<attribute name="VENDOR" value="PANASONIC" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TL2575HV-15IKTTR">
+<gates>
+<gate name="A" symbol="TL2575HV-15_KTT_5" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="KTT5_6P22X6P86">
+<connects>
+<connect gate="A" pin="!ON/OFF" pad="5"/>
+<connect gate="A" pin="EPAD" pad="6"/>
+<connect gate="A" pin="FEEDBACK" pad="4"/>
+<connect gate="A" pin="GND" pad="3"/>
+<connect gate="A" pin="OUTPUT" pad="2"/>
+<connect gate="A" pin="VIN" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MANUFACTURER_PART_NUMBER" value="tl2575hv15_ktt_5" constant="no"/>
+<attribute name="VENDOR" value="Texas Instruments" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="KTT5_6P22X6P86-M" package="KTT5_6P22X6P86-M">
+<connects>
+<connect gate="A" pin="!ON/OFF" pad="5"/>
+<connect gate="A" pin="EPAD" pad="6"/>
+<connect gate="A" pin="FEEDBACK" pad="4"/>
+<connect gate="A" pin="GND" pad="3"/>
+<connect gate="A" pin="OUTPUT" pad="2"/>
+<connect gate="A" pin="VIN" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MANUFACTURER_PART_NUMBER" value="tl2575hv15_ktt_5" constant="no"/>
+<attribute name="VENDOR" value="Texas Instruments" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="KTT5_6P22X6P86-L" package="KTT5_6P22X6P86-L">
+<connects>
+<connect gate="A" pin="!ON/OFF" pad="5"/>
+<connect gate="A" pin="EPAD" pad="6"/>
+<connect gate="A" pin="FEEDBACK" pad="4"/>
+<connect gate="A" pin="GND" pad="3"/>
+<connect gate="A" pin="OUTPUT" pad="2"/>
+<connect gate="A" pin="VIN" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MANUFACTURER_PART_NUMBER" value="tl2575hv15_ktt_5" constant="no"/>
+<attribute name="VENDOR" value="Texas Instruments" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -7685,42 +7886,84 @@ Source: AVX .. aphvc.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="custom">
+<library name="GeekAmmo">
+<description>&lt;h3&gt;GeekAmmo  Library&lt;/h3&gt;
+
+These are parts used by the GeekAmmo company (now part of SparkFun Electronics)!
+
+ If you enjoy using this library, please buy one of our products at www.sparkfun.com.
+&lt;br&gt;&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt;Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/
+&lt;br&gt;&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="INDUCTOR_SMD_FOOTPRINT">
-<smd name="1" x="2.8" y="1.5" dx="5.6" dy="3" layer="1"/>
-<smd name="2" x="2.8" y="11" dx="5.6" dy="3" layer="1"/>
-<wire x1="-3.2" y1="0.5" x2="8.8" y2="0.5" width="0.1" layer="23"/>
-<wire x1="8.8" y1="0.5" x2="8.8" y2="12" width="0.1" layer="23"/>
-<wire x1="8.8" y1="12" x2="-3.2" y2="12" width="0.1" layer="23"/>
-<wire x1="-3.2" y1="12" x2="-3.2" y2="0.5" width="0.1" layer="23"/>
-<text x="-1.27" y="15.24" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.27" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
+<package name="RTRIM3362P">
+<description>Bourns 3362P</description>
+<wire x1="-3.29" y1="0.92" x2="3.31" y2="0.92" width="0.127" layer="21"/>
+<wire x1="-3.29" y1="0.92" x2="-3.29" y2="-5.82" width="0.127" layer="21"/>
+<wire x1="-3.29" y1="-5.82" x2="-3.29" y2="-6.07" width="0.127" layer="21"/>
+<wire x1="3.31" y1="0.92" x2="3.31" y2="-5.82" width="0.127" layer="21"/>
+<wire x1="3.31" y1="-5.82" x2="3.31" y2="-6.07" width="0.127" layer="21"/>
+<wire x1="-3.29" y1="-5.82" x2="3.31" y2="-5.82" width="0.127" layer="21"/>
+<wire x1="-3.29" y1="-6.07" x2="-3" y2="-6.07" width="0.127" layer="21"/>
+<wire x1="-3" y1="-6.07" x2="-3" y2="-5.84" width="0.127" layer="21"/>
+<wire x1="3.31" y1="-6.07" x2="3" y2="-6.07" width="0.127" layer="21"/>
+<wire x1="3" y1="-6.07" x2="3" y2="-5.85" width="0.127" layer="21"/>
+<wire x1="-0.5" y1="-1" x2="-0.5" y2="-2" width="0.127" layer="21"/>
+<wire x1="-0.5" y1="-2" x2="-1.5" y2="-2" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-3" x2="-0.5" y2="-3" width="0.127" layer="21"/>
+<wire x1="-0.5" y1="-3" x2="-0.5" y2="-4" width="0.127" layer="21"/>
+<wire x1="0.5" y1="-4" x2="0.5" y2="-3" width="0.127" layer="21"/>
+<wire x1="0.5" y1="-3" x2="1.5" y2="-3" width="0.127" layer="21"/>
+<wire x1="0.5" y1="-1" x2="0.5" y2="-2" width="0.127" layer="21"/>
+<wire x1="0.5" y1="-2" x2="1.5" y2="-2" width="0.127" layer="21"/>
+<wire x1="-0.254" y1="-2.54" x2="0.254" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="0" y1="-2.286" x2="0" y2="-2.794" width="0.127" layer="21"/>
+<wire x1="0.762" y1="-2.54" x2="1.27" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="-0.762" y1="-2.54" x2="-1.27" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.778" x2="0" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="0" y1="-3.302" x2="0" y2="-3.81" width="0.127" layer="21"/>
+<circle x="0" y="-2.5" radius="1.8027" width="0.127" layer="21"/>
+<pad name="1" x="-2.54" y="-2.54" drill="0.6"/>
+<pad name="2" x="0" y="0" drill="0.6"/>
+<pad name="3" x="2.54" y="-2.54" drill="0.6"/>
+<text x="-2.54" y="1.27" size="1.016" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-7.62" size="1.016" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
-<symbol name="INDUCTOR_SYMBOL">
-<pin name="+" x="12.7" y="5.08" length="middle" rot="R180"/>
-<pin name="-" x="12.7" y="-2.54" length="middle" rot="R180"/>
-<wire x1="7.62" y1="7.62" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="0" y1="-5.08" x2="0" y2="7.62" width="0.254" layer="94"/>
-<wire x1="0" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
-<text x="0" y="7.62" size="1.27" layer="95">&gt;NAME</text>
-<text x="0" y="-7.62" size="1.27" layer="95">&gt;VALUE</text>
+<symbol name="RTRIM">
+<wire x1="0.762" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-0.762" y1="2.54" x2="-0.762" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0.762" y1="-2.54" x2="0.762" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="1.651" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.651" y1="0" x2="-1.8796" y2="1.7526" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="-0.762" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-0.762" y1="-2.54" x2="0.762" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.286" y1="1.27" x2="-1.651" y2="2.413" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-0.508" x2="-3.048" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-0.508" x2="-2.032" y2="-1.524" width="0.1524" layer="94"/>
+<text x="-5.969" y="-3.81" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="-3.81" y="-3.81" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="1" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="5.08" y="0" visible="pad" length="short" direction="pas" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="PA4320" uservalue="yes">
-<description>Pulse Inductor, Digikey number 553-3685-1-ND.</description>
+<deviceset name="RTRIM">
+<description>&lt;b&gt;BOURNS 3362 - 1/4" Square Trimpot® Trimming Potentiometer&lt;/b&gt;</description>
 <gates>
-<gate name="PA4320_INDUCTOR" symbol="INDUCTOR_SYMBOL" x="-3.54" y="-1.74"/>
+<gate name="G$1" symbol="RTRIM" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="INDUCTOR_SMD_FOOTPRINT">
+<device name="-3362P" package="RTRIM3362P">
 <connects>
-<connect gate="PA4320_INDUCTOR" pin="+" pad="1"/>
-<connect gate="PA4320_INDUCTOR" pin="-" pad="2"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -7763,8 +8006,21 @@ Source: AVX .. aphvc.pdf</description>
 <part name="FRAME7" library="E-P-008-R1.2" deviceset="FRAME_A_L" device=""/>
 <part name="T1" library="Teensy_3_and_LC_Series_Boards_v1.1" deviceset="TEENSY_3.1_ALL_PINS" device=""/>
 <part name="U$5" library="MotorControllerEagleLibrary" deviceset="FLYBACK" device=""/>
-<part name="INDUCTOR" library="custom" deviceset="PA4320" device="" value="330 uH"/>
-<part name="U$6" library="MotorControllerEagleLibrary" deviceset="TL2575-05IKTTR" device="KTT5_6P22X6P86-L"/>
+<part name="U$7" library="MotorControllerEagleLibrary" deviceset="PA4320" device=""/>
+<part name="U$8" library="MotorControllerEagleLibrary" deviceset="1N5819" device=""/>
+<part name="C5" library="MotorControllerEagleLibrary" deviceset="EEUFR1H221B" device=""/>
+<part name="C6" library="MotorControllerEagleLibrary" deviceset="EEUFR1H221B" device=""/>
+<part name="C7" library="MotorControllerEagleLibrary" deviceset="EEUFR1H221B" device=""/>
+<part name="C8" library="MotorControllerEagleLibrary" deviceset="EEUFR1H221B" device=""/>
+<part name="U$9" library="GeekAmmo" deviceset="RTRIM" device="-3362P"/>
+<part name="U$6" library="MotorControllerEagleLibrary" deviceset="TL2575HV-15IKTTR" device=""/>
+<part name="U$10" library="MotorControllerEagleLibrary" deviceset="PA4320" device=""/>
+<part name="U$11" library="MotorControllerEagleLibrary" deviceset="1N5819" device=""/>
+<part name="C9" library="MotorControllerEagleLibrary" deviceset="EEUFR1H221B" device=""/>
+<part name="C10" library="MotorControllerEagleLibrary" deviceset="EEUFR1H221B" device=""/>
+<part name="C11" library="MotorControllerEagleLibrary" deviceset="EEUFR1H221B" device=""/>
+<part name="C12" library="MotorControllerEagleLibrary" deviceset="EEUFR1H221B" device=""/>
+<part name="U$13" library="MotorControllerEagleLibrary" deviceset="TL2575-05IKTTR" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8165,39 +8421,196 @@ revision</text>
 <description>Power Supply</description>
 <plain>
 <text x="200.66" y="27.94" size="3.81" layer="94">POWER SUPPLY</text>
+<text x="172.72" y="154.94" size="6.4516" layer="94">15V Variable Supply</text>
+<text x="172.72" y="83.82" size="6.4516" layer="94">5V Supply</text>
+<text x="58.42" y="149.86" size="1.27" layer="94">220uF Panasonic Caps</text>
+<text x="58.42" y="76.2" size="1.27" layer="94">220uF Panasonic Caps</text>
 </plain>
 <instances>
 <instance part="FRAME5" gate="G$1" x="0" y="0"/>
 <instance part="FRAME5" gate="G$2" x="172.72" y="0"/>
-<instance part="INDUCTOR" gate="PA4320_INDUCTOR" x="27.94" y="149.86"/>
-<instance part="U$6" gate="A" x="53.34" y="177.8"/>
+<instance part="U$7" gate="PA4320_INDUCTOR" x="58.42" y="167.64" rot="R90"/>
+<instance part="U$8" gate="G$1" x="48.26" y="167.64" rot="R90"/>
+<instance part="C5" gate="A" x="83.82" y="154.94" rot="R270"/>
+<instance part="C6" gate="A" x="96.52" y="154.94" rot="R270"/>
+<instance part="C7" gate="A" x="111.76" y="154.94" rot="R270"/>
+<instance part="C8" gate="A" x="127" y="154.94" rot="R270"/>
+<instance part="U$9" gate="G$1" x="119.38" y="167.64" rot="R90"/>
+<instance part="U$6" gate="A" x="66.04" y="180.34"/>
+<instance part="U$10" gate="PA4320_INDUCTOR" x="58.42" y="93.98" rot="R90"/>
+<instance part="U$11" gate="G$1" x="48.26" y="93.98" rot="R90"/>
+<instance part="C9" gate="A" x="83.82" y="81.28" rot="R270"/>
+<instance part="C10" gate="A" x="96.52" y="81.28" rot="R270"/>
+<instance part="C11" gate="A" x="111.76" y="81.28" rot="R270"/>
+<instance part="C12" gate="A" x="127" y="81.28" rot="R270"/>
+<instance part="U$13" gate="A" x="66.04" y="106.68"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="N$1" class="0">
+<net name="GND" class="0">
 <segment>
-<pinref part="U$6" gate="A" pin="OUTPUT"/>
-<wire x1="55.88" y1="175.26" x2="45.72" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="175.26" x2="45.72" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="INDUCTOR" gate="PA4320_INDUCTOR" pin="+"/>
-<wire x1="45.72" y1="154.94" x2="40.64" y2="154.94" width="0.1524" layer="91"/>
+<pinref part="U$8" gate="G$1" pin="A"/>
+<wire x1="48.26" y1="165.1" x2="48.26" y2="157.48" width="0.1524" layer="91"/>
+<label x="48.26" y="157.48" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="C5" gate="A" pin="22"/>
+<wire x1="83.82" y1="147.32" x2="83.82" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="C8" gate="A" pin="22"/>
+<wire x1="83.82" y1="144.78" x2="96.52" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="144.78" x2="111.76" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="144.78" x2="127" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="127" y1="144.78" x2="127" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="C7" gate="A" pin="22"/>
+<wire x1="111.76" y1="147.32" x2="111.76" y2="144.78" width="0.1524" layer="91"/>
+<junction x="111.76" y="144.78"/>
+<pinref part="C6" gate="A" pin="22"/>
+<wire x1="96.52" y1="147.32" x2="96.52" y2="144.78" width="0.1524" layer="91"/>
+<junction x="96.52" y="144.78"/>
+<label x="101.6" y="142.24" size="1.778" layer="95"/>
+</segment>
+<segment>
+<label x="109.22" y="177.8" size="1.778" layer="95"/>
+<pinref part="U$9" gate="G$1" pin="3"/>
+<wire x1="114.3" y1="167.64" x2="111.76" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="167.64" x2="111.76" y2="177.8" width="0.1524" layer="91"/>
+<pinref part="U$6" gate="A" pin="!ON/OFF"/>
+<wire x1="104.14" y1="177.8" x2="111.76" y2="177.8" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$6" gate="A" pin="GND"/>
+<wire x1="68.58" y1="175.26" x2="66.04" y2="175.26" width="0.1524" layer="91"/>
+<label x="63.5" y="172.72" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$11" gate="G$1" pin="A"/>
+<wire x1="48.26" y1="91.44" x2="48.26" y2="83.82" width="0.1524" layer="91"/>
+<label x="48.26" y="83.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="C9" gate="A" pin="22"/>
+<wire x1="83.82" y1="73.66" x2="83.82" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="C12" gate="A" pin="22"/>
+<wire x1="83.82" y1="71.12" x2="96.52" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="71.12" x2="111.76" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="71.12" x2="127" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="127" y1="71.12" x2="127" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="C11" gate="A" pin="22"/>
+<wire x1="111.76" y1="73.66" x2="111.76" y2="71.12" width="0.1524" layer="91"/>
+<junction x="111.76" y="71.12"/>
+<pinref part="C10" gate="A" pin="22"/>
+<wire x1="96.52" y1="73.66" x2="96.52" y2="71.12" width="0.1524" layer="91"/>
+<junction x="96.52" y="71.12"/>
+<label x="101.6" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<label x="109.22" y="104.14" size="1.778" layer="95"/>
+<wire x1="104.14" y1="104.14" x2="111.76" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="U$13" gate="A" pin="!ON/OFF"/>
+</segment>
+<segment>
+<wire x1="68.58" y1="101.6" x2="66.04" y2="101.6" width="0.1524" layer="91"/>
+<label x="63.5" y="99.06" size="1.778" layer="95"/>
+<pinref part="U$13" gate="A" pin="GND"/>
+</segment>
+</net>
+<net name="15V_POWER_REGULATED" class="0">
+<segment>
+<pinref part="U$9" gate="G$1" pin="1"/>
+<wire x1="124.46" y1="167.64" x2="127" y2="167.64" width="0.1524" layer="91"/>
+<pinref part="C8" gate="A" pin="11"/>
+<wire x1="83.82" y1="157.48" x2="96.52" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="157.48" x2="111.76" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="157.48" x2="127" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="127" y1="157.48" x2="127" y2="154.94" width="0.1524" layer="91"/>
+<pinref part="C7" gate="A" pin="11"/>
+<wire x1="111.76" y1="154.94" x2="111.76" y2="157.48" width="0.1524" layer="91"/>
+<junction x="111.76" y="157.48"/>
+<pinref part="C6" gate="A" pin="11"/>
+<wire x1="96.52" y1="154.94" x2="96.52" y2="157.48" width="0.1524" layer="91"/>
+<junction x="96.52" y="157.48"/>
+<pinref part="C5" gate="A" pin="11"/>
+<wire x1="83.82" y1="154.94" x2="83.82" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="U$7" gate="PA4320_INDUCTOR" pin="-"/>
+<wire x1="58.42" y1="160.02" x2="58.42" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="157.48" x2="83.82" y2="157.48" width="0.1524" layer="91"/>
+<junction x="83.82" y="157.48"/>
+<wire x1="127" y1="167.64" x2="127" y2="157.48" width="0.1524" layer="91"/>
+<junction x="127" y="157.48"/>
+<wire x1="127" y1="157.48" x2="137.16" y2="157.48" width="0.1524" layer="91"/>
+<label x="134.62" y="157.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="INDUCTOR" gate="PA4320_INDUCTOR" pin="-"/>
-<wire x1="40.64" y1="147.32" x2="99.06" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="147.32" x2="99.06" y2="172.72" width="0.1524" layer="91"/>
 <pinref part="U$6" gate="A" pin="FEEDBACK"/>
-<wire x1="99.06" y1="172.72" x2="91.44" y2="172.72" width="0.1524" layer="91"/>
+<pinref part="U$9" gate="G$1" pin="2"/>
+<wire x1="104.14" y1="175.26" x2="119.38" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="175.26" x2="119.38" y2="172.72" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="GND" class="0">
+<net name="N$1" class="0">
 <segment>
-<pinref part="U$6" gate="A" pin="GND"/>
-<wire x1="55.88" y1="172.72" x2="53.34" y2="172.72" width="0.1524" layer="91"/>
-<label x="48.26" y="172.72" size="1.778" layer="95"/>
+<pinref part="U$7" gate="PA4320_INDUCTOR" pin="+"/>
+<wire x1="58.42" y1="175.26" x2="58.42" y2="177.8" width="0.1524" layer="91"/>
+<pinref part="U$6" gate="A" pin="OUTPUT"/>
+<wire x1="58.42" y1="177.8" x2="68.58" y2="177.8" width="0.1524" layer="91"/>
+<pinref part="U$8" gate="G$1" pin="K"/>
+<wire x1="48.26" y1="170.18" x2="48.26" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="177.8" x2="48.26" y2="177.8" width="0.1524" layer="91"/>
+<junction x="58.42" y="177.8"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="U$10" gate="PA4320_INDUCTOR" pin="+"/>
+<wire x1="58.42" y1="101.6" x2="58.42" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="104.14" x2="68.58" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="U$11" gate="G$1" pin="K"/>
+<wire x1="48.26" y1="96.52" x2="48.26" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="104.14" x2="48.26" y2="104.14" width="0.1524" layer="91"/>
+<junction x="58.42" y="104.14"/>
+<pinref part="U$13" gate="A" pin="OUTPUT"/>
+</segment>
+</net>
+<net name="5V_POWER_REGULATED" class="0">
+<segment>
+<pinref part="C12" gate="A" pin="11"/>
+<wire x1="83.82" y1="83.82" x2="96.52" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="83.82" x2="111.76" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="83.82" x2="127" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="127" y1="83.82" x2="127" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="C11" gate="A" pin="11"/>
+<wire x1="111.76" y1="81.28" x2="111.76" y2="83.82" width="0.1524" layer="91"/>
+<junction x="111.76" y="83.82"/>
+<pinref part="C10" gate="A" pin="11"/>
+<wire x1="96.52" y1="81.28" x2="96.52" y2="83.82" width="0.1524" layer="91"/>
+<junction x="96.52" y="83.82"/>
+<pinref part="C9" gate="A" pin="11"/>
+<wire x1="83.82" y1="81.28" x2="83.82" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="U$10" gate="PA4320_INDUCTOR" pin="-"/>
+<wire x1="58.42" y1="86.36" x2="58.42" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="83.82" x2="83.82" y2="83.82" width="0.1524" layer="91"/>
+<junction x="83.82" y="83.82"/>
+<wire x1="127" y1="83.82" x2="137.16" y2="83.82" width="0.1524" layer="91"/>
+<junction x="127" y="83.82"/>
+<label x="134.62" y="83.82" size="1.778" layer="95"/>
+<pinref part="U$13" gate="A" pin="FEEDBACK"/>
+<wire x1="104.14" y1="101.6" x2="127" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="127" y1="101.6" x2="127" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="SAFE_POWER" class="0">
+<segment>
+<pinref part="U$6" gate="A" pin="VIN"/>
+<wire x1="68.58" y1="180.34" x2="66.04" y2="180.34" width="0.1524" layer="91"/>
+<label x="53.34" y="180.34" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$13" gate="A" pin="VIN"/>
+<wire x1="68.58" y1="106.68" x2="66.04" y2="106.68" width="0.1524" layer="91"/>
+<label x="50.8" y="106.68" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
