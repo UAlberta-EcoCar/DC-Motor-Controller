@@ -12535,7 +12535,7 @@ Basic Inductor/Choke - 0603 and 1206. Footprints are not proven and vary greatly
 <part name="R3" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="3.3k"/>
 <part name="R4" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="3.3k"/>
 <part name="L1" library="SparkFun (2015_10_14 22_27_04 UTC)" deviceset="INDUCTOR" device="0805" value="42nH"/>
-<part name="U1" library="MotorControllerEagleLibrary" deviceset="TL072CDT" device=""/>
+<part name="AD8512ARZ" library="MotorControllerEagleLibrary" deviceset="TL072CDT" device=""/>
 <part name="C23" library="rcl" deviceset="C-EU" device="C0805" value="0.1uF"/>
 <part name="C24" library="rcl" deviceset="C-EU" device="C0805"/>
 <part name="GND9" library="E-P-008-R1.2" deviceset="GND" device=""/>
@@ -13261,6 +13261,9 @@ revision</text>
 <text x="203.2" y="25.4" size="3.81" layer="94">TEENSY 3.2
 CONNECTIONS</text>
 <text x="195.58" y="43.18" size="1.778" layer="91">2OUT = (R7+R8)/(R5+R6)Vin =~ 1/10*Vin</text>
+<text x="238.76" y="96.52" size="1.778" layer="94" rot="R180">Use 
+AD8512ARZ OpAmp
+</text>
 </plain>
 <instances>
 <instance part="FRAME6" gate="G$1" x="0" y="0"/>
@@ -13279,7 +13282,7 @@ CONNECTIONS</text>
 <instance part="R2" gate="G$1" x="30.48" y="50.8" rot="R90"/>
 <instance part="R3" gate="G$1" x="43.18" y="50.8" rot="R90"/>
 <instance part="R4" gate="G$1" x="83.82" y="50.8" rot="R90"/>
-<instance part="U1" gate="A" x="190.5" y="68.58"/>
+<instance part="AD8512ARZ" gate="A" x="190.5" y="68.58"/>
 <instance part="C23" gate="G$1" x="213.36" y="76.2"/>
 <instance part="C24" gate="G$1" x="294.64" y="76.2"/>
 <instance part="GND9" gate="1" x="213.36" y="68.58"/>
@@ -13469,12 +13472,12 @@ CONNECTIONS</text>
 <label x="88.9" y="127" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="1IN-"/>
+<pinref part="AD8512ARZ" gate="A" pin="1IN-"/>
 <wire x1="172.72" y1="81.28" x2="167.64" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="167.64" y1="81.28" x2="167.64" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="167.64" y1="91.44" x2="203.2" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="91.44" x2="203.2" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="1OUT"/>
+<pinref part="AD8512ARZ" gate="A" pin="1OUT"/>
 <wire x1="203.2" y1="78.74" x2="200.66" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="78.74" x2="213.36" y2="78.74" width="0.1524" layer="91"/>
 <junction x="203.2" y="78.74"/>
@@ -13535,7 +13538,7 @@ CONNECTIONS</text>
 </net>
 <net name="CURRENT_SENSOR_OUTPUT" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="1IN+"/>
+<pinref part="AD8512ARZ" gate="A" pin="1IN+"/>
 <wire x1="172.72" y1="76.2" x2="160.02" y2="76.2" width="0.1524" layer="91"/>
 <label x="142.24" y="76.2" size="1.778" layer="95"/>
 </segment>
@@ -13543,7 +13546,7 @@ CONNECTIONS</text>
 <net name="N$7" class="0">
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
-<pinref part="U1" gate="A" pin="2IN+"/>
+<pinref part="AD8512ARZ" gate="A" pin="2IN+"/>
 <wire x1="160.02" y1="66.04" x2="165.1" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="165.1" y1="63.5" x2="172.72" y2="63.5" width="0.1524" layer="91"/>
@@ -13554,7 +13557,7 @@ CONNECTIONS</text>
 <net name="N$9" class="0">
 <segment>
 <pinref part="R6" gate="G$1" pin="2"/>
-<pinref part="U1" gate="A" pin="2IN-"/>
+<pinref part="AD8512ARZ" gate="A" pin="2IN-"/>
 <wire x1="160.02" y1="55.88" x2="170.18" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="58.42" x2="172.72" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="58.42" x2="170.18" y2="48.26" width="0.1524" layer="91"/>
@@ -13568,7 +13571,7 @@ CONNECTIONS</text>
 <pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="187.96" y1="48.26" x2="203.2" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="48.26" x2="203.2" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="2OUT"/>
+<pinref part="AD8512ARZ" gate="A" pin="2OUT"/>
 <wire x1="203.2" y1="60.96" x2="200.66" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="60.96" x2="213.36" y2="60.96" width="0.1524" layer="91"/>
 <junction x="203.2" y="60.96"/>
