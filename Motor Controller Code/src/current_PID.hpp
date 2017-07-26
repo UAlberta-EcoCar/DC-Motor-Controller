@@ -20,7 +20,7 @@ class current_PID : public PID {
 
     //constructors
 
-    current_PID(AnalogIn *feedBack,double current_slope,double current_intercept, uint16_t num_samples, float p, float i, float d);
+    current_PID(AnalogIn *feedBack, double current_slope, double current_intercept, float p, float i, float d, uint32_t max_sum, uint32_t p_saturation, uint32_t i_saturation, uint32_t d_saturation);
     //note: slope represents sensitivity in mA/V, intercept is mA
 
 };

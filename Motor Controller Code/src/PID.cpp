@@ -12,28 +12,34 @@
 //Constructor Definitions
 
 PID::PID() {
-
-	p = 0;
-	i = 0;
-	d = 0;
-	sum = 0;
-	ADC_value = 0;
-	reference = 0;
 	error = 0;
-	slope = 0;
-	duty_cycle = 0;
-	previous_cycle = 0;
-	num_samples = 128;
-
 }
 
-PID::PID(AnalogIn *feedBack, uint16_t num_samples, float p, float i, float d) {
+PID::PID(AnalogIn *feedBack, float p, float i, float d, uint32_t max_sum, uint32_t p_saturation, uint32_t i_saturation, uint32_t d_saturation) {
+
+	if(p > max_p)
+		p = max_p;
+	else if(p < 0)
+		p = 0;
+	this->p = p;
+
+	if(i > max_i)
+		i = max_i;
+	else if(i < 0)
+		i = 0;
+	this->i = i;
+
+	if(d > max_d)
+		d = max_d;
+	else if(d < 0)
+		d = 0;
+	this->d = d;
 
 	this->feedBack = feedBack;
-	this->p = p;
-	this->i = i;
-	this->d = d;
-	this->num_samples = num_samples;
+	this->max_sum = max_sum;
+	this->p_saturation = p_saturation;
+	this->i_saturation = i_saturation;
+	this->d_saturation = d_saturation;
 	sum = 0;
 	ADC_value = 0;
 	reference = 0;
@@ -53,36 +59,42 @@ uint16_t PID::PID_calc(){
 	ADC_value = analog_read();
 	error = (int32_t)reference - (int32_t)ADC_value;
 
-	//saturates the integral sum, to prevent overflow
-	if((error > 0) && (sum > INT_MAX - error)) {
-		sum = INT_MAX; //saturates sum
-	}
-	else if((error < 0) && (sum < INT_MIN - error)) {
-		sum = INT_MIN; //saturates sum
-	}
-	else {
-		sum += error; //add error to the sum, if there is no saturation
-	}
+	//Proportional Term
+	if(error*p > max_p) //checks for saturation and adds error to the duty cycle
+		duty_cycle = max_p;
+	else if(error*p < -max_p)
+		duty_cycle = -max_p;
+	else
+		duty_cycle = error*p;
 
-	//saturates the derivative term  (slope = error - previous_cycle)
-	if((previous_cycle < 0) && (error > INT_MAX + previous_cycle)) {
-		slope = INT_MAX; //saturates derivative
-	}
-	else if((previous_cycle > 0) && (error < INT_MIN + previous_cycle)) {
-		slope = INT_MIN; //saturates derivative
-	}
-	else {
-		slope = error - previous_cycle; //calculates slope, if there is no saturation
-	}
+	//Integral Term
+	sum += error;
+	if(sum > (int32_t)max_sum) //checks for max sum
+		sum = max_sum;
+	else if(sum < -(int32_t)max_sum)
+	 	sum = -max_sum;
+	if(sum*i > max_i) //checks for saturation and adds sum to the duty cycle
+		duty_cycle += max_i;
+	else if(sum*i < -max_i)
+		duty_cycle += -max_i;
+	else
+		duty_cycle += sum*i;
 
+	//Derivative Term
+	slope = error - previous_cycle; //calculates slope, if there is no saturation
 	previous_cycle = error;
+	if(slope*d > max_d)
+		duty_cycle += max_d;
+	else if(slope*d < -max_d)
+		duty_cycle += -max_d;
+	else
+		duty_cycle += slope;
 
-	duty_cycle = round(error*p + sum*i + slope*d); //note: overflow protected
 
 	if(duty_cycle >= 65536) { //saturates duty cycle at 65535
 		duty_cycle = 65535;
 	}
-	else if(duty_cycle < 0) {
+	else if(duty_cycle < 0) { //saturates duty cycle at 0
 		duty_cycle = 0;
 	}
 
