@@ -12722,9 +12722,6 @@ Basic Inductor/Choke - 0603 and 1206. Footprints are not proven and vary greatly
 <part name="R4" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="3.3k"/>
 <part name="L1" library="SparkFun (2015_10_14 22_27_04 UTC)" deviceset="INDUCTOR" device="0805" value="42nH"/>
 <part name="AD8512ARZ" library="MotorControllerEagleLibrary" deviceset="TL072CDT" device=""/>
-<part name="C23" library="rcl" deviceset="C-EU" device="C0805" value="0.1uF"/>
-<part name="C24" library="rcl" deviceset="C-EU" device="C0805"/>
-<part name="GND9" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="R5" library="rcl" deviceset="R-US_" device="R0805" value="100k"/>
 <part name="R6" library="rcl" deviceset="R-US_" device="R0805" value="100k"/>
 <part name="R7" library="rcl" deviceset="R-US_" device="R0805" value="10k"/>
@@ -12746,6 +12743,8 @@ Basic Inductor/Choke - 0603 and 1206. Footprints are not proven and vary greatly
 <part name="GND21" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="GND22" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="GND23" library="E-P-008-R1.2" deviceset="GND" device=""/>
+<part name="C23" library="rcl" deviceset="C-EU" device="C0805" value="1uF"/>
+<part name="GND9" library="E-P-008-R1.2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13519,7 +13518,7 @@ revision</text>
 CONNECTIONS</text>
 <text x="195.58" y="43.18" size="1.778" layer="91">2OUT = (R7+R8)/(R5+R6)Vin =~ 1/10*Vin</text>
 <text x="238.76" y="96.52" size="1.778" layer="94" rot="R180">Use 
-AD8512ARZ OpAmp
+TL032IDR OpAmp
 </text>
 </plain>
 <instances>
@@ -13540,9 +13539,6 @@ AD8512ARZ OpAmp
 <instance part="R3" gate="G$1" x="43.18" y="50.8" rot="R90"/>
 <instance part="R4" gate="G$1" x="83.82" y="50.8" rot="R90"/>
 <instance part="AD8512ARZ" gate="A" x="190.5" y="68.58"/>
-<instance part="C23" gate="G$1" x="213.36" y="76.2"/>
-<instance part="C24" gate="G$1" x="294.64" y="76.2"/>
-<instance part="GND9" gate="1" x="213.36" y="68.58"/>
 <instance part="R5" gate="G$1" x="154.94" y="66.04"/>
 <instance part="R6" gate="G$1" x="154.94" y="58.42"/>
 <instance part="R7" gate="G$1" x="182.88" y="48.26"/>
@@ -13551,6 +13547,8 @@ AD8512ARZ OpAmp
 <instance part="C25" gate="G$1" x="213.36" y="58.42"/>
 <instance part="GND11" gate="1" x="213.36" y="50.8"/>
 <instance part="GND12" gate="1" x="144.78" y="50.8"/>
+<instance part="C23" gate="G$1" x="134.62" y="60.96"/>
+<instance part="GND9" gate="1" x="134.62" y="53.34"/>
 </instances>
 <busses>
 </busses>
@@ -13611,10 +13609,6 @@ AD8512ARZ OpAmp
 <label x="53.34" y="58.42" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="C23" gate="G$1" pin="2"/>
-<pinref part="GND9" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="R8" gate="G$1" pin="1"/>
 <pinref part="GND10" gate="1" pin="GND"/>
 </segment>
@@ -13627,6 +13621,10 @@ AD8512ARZ OpAmp
 <pinref part="GND12" gate="1" pin="GND"/>
 <wire x1="149.86" y1="58.42" x2="144.78" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="58.42" x2="144.78" y2="53.34" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C23" gate="G$1" pin="2"/>
+<pinref part="GND9" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="5V_POWER_REGULATED" class="0">
@@ -13736,11 +13734,8 @@ AD8512ARZ OpAmp
 <wire x1="203.2" y1="91.44" x2="203.2" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="AD8512ARZ" gate="A" pin="1OUT"/>
 <wire x1="203.2" y1="78.74" x2="200.66" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="78.74" x2="213.36" y2="78.74" width="0.1524" layer="91"/>
 <junction x="203.2" y="78.74"/>
-<pinref part="C23" gate="G$1" pin="1"/>
-<junction x="213.36" y="78.74"/>
-<wire x1="213.36" y1="78.74" x2="226.06" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="78.74" x2="226.06" y2="78.74" width="0.1524" layer="91"/>
 <label x="226.06" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -13846,8 +13841,10 @@ AD8512ARZ OpAmp
 <net name="SAFE_POWER" class="0">
 <segment>
 <pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="149.86" y1="66.04" x2="147.32" y2="66.04" width="0.1524" layer="91"/>
-<label x="134.62" y="66.04" size="1.778" layer="95"/>
+<label x="134.62" y="68.58" size="1.778" layer="95"/>
+<pinref part="C23" gate="G$1" pin="1"/>
+<wire x1="134.62" y1="63.5" x2="134.62" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="66.04" x2="149.86" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
