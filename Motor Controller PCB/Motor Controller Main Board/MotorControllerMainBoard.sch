@@ -15194,7 +15194,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND26" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="U$15" library="Connector 732-3204" deviceset="732-3204-ND_CONNECTOR" device=""/>
 <part name="U$16" library="Connector 732-3204" deviceset="732-3204-ND_CONNECTOR" device=""/>
-<part name="GND27" library="E-P-008-R1.2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15261,7 +15260,6 @@ revision</text>
 <text x="121.92" y="137.16" size="1.778" layer="94">For Future
 revision</text>
 <text x="20.32" y="58.42" size="1.778" layer="91">Terminal Block (Negative)</text>
-<text x="20.32" y="38.1" size="1.778" layer="91">Terminal Block (Motor Negative)</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -15272,8 +15270,7 @@ revision</text>
 <instance part="U$14" gate="G$1" x="25.4" y="53.34"/>
 <instance part="GND26" gate="1" x="40.64" y="45.72"/>
 <instance part="U$15" gate="G$1" x="187.96" y="147.32" rot="R180"/>
-<instance part="U$16" gate="G$1" x="25.4" y="33.02"/>
-<instance part="GND27" gate="1" x="40.64" y="25.4"/>
+<instance part="U$16" gate="G$1" x="15.24" y="106.68"/>
 </instances>
 <busses>
 </busses>
@@ -15287,7 +15284,7 @@ revision</text>
 <net name="MOTOR_OUTPUT_(--)" class="0">
 <segment>
 <wire x1="22.86" y1="106.68" x2="30.48" y2="106.68" width="0.1524" layer="91"/>
-<label x="10.16" y="109.22" size="1.778" layer="95"/>
+<label x="10.16" y="111.76" size="1.778" layer="95"/>
 <wire x1="30.48" y1="106.68" x2="35.56" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="106.68" x2="30.48" y2="86.36" width="0.1524" layer="91"/>
 <junction x="30.48" y="106.68"/>
@@ -15301,6 +15298,7 @@ revision</text>
 <wire x1="76.2" y1="86.36" x2="76.2" y2="109.22" width="0.1524" layer="91"/>
 <label x="78.74" y="119.38" size="1.778" layer="95"/>
 <pinref part="U$5" gate="G$1" pin="ANODE"/>
+<pinref part="U$16" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="MAIN_POWER_IN(+)" class="0">
@@ -15327,13 +15325,6 @@ revision</text>
 <wire x1="33.02" y1="53.34" x2="40.64" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="53.34" x2="40.64" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="GND26" gate="1" pin="GND"/>
-</segment>
-<segment>
-<wire x1="33.02" y1="33.02" x2="40.64" y2="33.02" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="40.64" y1="33.02" x2="40.64" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="GND27" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="FET_DRIVER_SIGNAL" class="0">
