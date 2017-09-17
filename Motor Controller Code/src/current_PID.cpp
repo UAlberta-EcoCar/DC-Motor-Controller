@@ -2,31 +2,13 @@
 
 //constructor definitions
 
-current_PID::current_PID(AnalogIn *feedBack, double current_slope, double current_intercept, float p, float i, float d, uint32_t max_sum, uint32_t p_saturation, uint32_t i_saturation, uint32_t d_saturation) {
-
-  if(p > max_p)
-		p = max_p;
-	else if(p < 0)
-		p = 0;
-	this->p = p;
-
-	if(i > max_i)
-		i = max_i;
-	else if(i < 0)
-		i = 0;
-	this->i = i;
-
-	if(d > max_d)
-		d = max_d;
-	else if(d < 0)
-		d = 0;
-	this->d = d;
+current_PID::current_PID(AnalogIn *feedBack,double current_slope,double current_intercept, uint16_t num_samples, float p, float i, float d){
 
   this->feedBack = feedBack;
-  this->max_sum = max_sum;
-  this->p_saturation = p_saturation;
-	this->i_saturation = i_saturation;
-	this->d_saturation = d_saturation;
+	this->p = p;
+	this->i = i;
+	this->d = d;
+	this->num_samples = num_samples;
 	sum = 0;
 	ADC_value = 0;
 	reference = 0;
