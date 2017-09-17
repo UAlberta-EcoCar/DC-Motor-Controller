@@ -1,5 +1,5 @@
 #include "mbed.h"
-#include "rtos.h"
+//#include "rtos.h"
 #include "PID.hpp"
 #include <stdint.h>
 #include <math.h>
@@ -60,10 +60,10 @@ uint16_t PID::PID_calc(){
 	error = (int32_t)reference - (int32_t)ADC_value;
 
 	//Proportional Term
-	if(error*p > max_p) //checks for saturation and adds error to the duty cycle
-		duty_cycle = max_p;
-	else if(error*p < -max_p)
-		duty_cycle = -max_p;
+	if((int32_t)(error*p) > (int32_t)p_saturation) //checks for saturation and adds error to the duty cycle
+		duty_cycle = p_saturation;
+	else if((int32_t)(error*p) < -(int32_t)p_saturation)
+		duty_cycle = -p_saturation;
 	else
 		duty_cycle = error*p;
 
@@ -73,22 +73,23 @@ uint16_t PID::PID_calc(){
 		sum = max_sum;
 	else if(sum < -(int32_t)max_sum)
 	 	sum = -max_sum;
-	if(sum*i > max_i) //checks for saturation and adds sum to the duty cycle
-		duty_cycle += max_i;
-	else if(sum*i < -max_i)
-		duty_cycle += -max_i;
+	if((int32_t)(sum*i) > (int32_t)i_saturation) //checks for saturation and adds sum to the duty cycle
+		duty_cycle += i_saturation;
+	else if((int32_t)(sum*i) < -(int32_t)i_saturation)
+		duty_cycle += -i_saturation;
 	else
 		duty_cycle += sum*i;
+		//duty_cycle += (int32_t)sum*i;
 
 	//Derivative Term
 	slope = error - previous_cycle; //calculates slope, if there is no saturation
 	previous_cycle = error;
-	if(slope*d > max_d)
-		duty_cycle += max_d;
-	else if(slope*d < -max_d)
-		duty_cycle += -max_d;
+	/*if((int32_t)(slope*d) > (int32_t)d_saturation)
+		duty_cycle += d_saturation;
+	else if((int32_t)(slope*d) < -(int32_t)d_saturation)
+		duty_cycle += -d_saturation;
 	else
-		duty_cycle += slope;
+		duty_cycle += slope*d; */
 
 
 	if(duty_cycle >= 65536) { //saturates duty cycle at 65535
