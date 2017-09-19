@@ -16403,6 +16403,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R10" library="MotorControllerEagleLibrary" deviceset="FKN1WSJR-52-4R7" device=""/>
 <part name="R11" library="MotorControllerEagleLibrary" deviceset="FKN1WSJR-52-4R7" device=""/>
 <part name="R12" library="MotorControllerEagleLibrary" deviceset="FKN1WSJR-52-4R7" device=""/>
+<part name="C46" library="rcl" deviceset="C-EU" device="C0805" value="1uF"/>
+<part name="GND27" library="E-P-008-R1.2" deviceset="GND" device=""/>
+<part name="C47" library="SparkFun-Capacitors" deviceset="CAP_POL" device="C" value="100uf"/>
+<part name="C48" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="10uf"/>
+<part name="C49" library="SparkFun-Capacitors" deviceset="CAP_POL" device="C" value="100uf"/>
+<part name="C50" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="10uf"/>
 </parts>
 <sheets>
 <sheet>
@@ -17462,6 +17468,12 @@ TL032IDR OpAmp
 <instance part="GND12" gate="1" x="144.78" y="50.8"/>
 <instance part="C23" gate="G$1" x="134.62" y="60.96"/>
 <instance part="GND9" gate="1" x="134.62" y="53.34"/>
+<instance part="C46" gate="G$1" x="213.36" y="76.2"/>
+<instance part="GND27" gate="1" x="213.36" y="68.58"/>
+<instance part="C47" gate="G$1" x="190.5" y="195.58"/>
+<instance part="C48" gate="G$1" x="220.98" y="193.04" rot="MR0"/>
+<instance part="C49" gate="G$1" x="228.6" y="195.58"/>
+<instance part="C50" gate="G$1" x="259.08" y="193.04" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -17472,12 +17484,24 @@ TL032IDR OpAmp
 <wire x1="213.36" y1="190.5" x2="198.12" y2="190.5" width="0.1524" layer="91"/>
 <label x="203.2" y="187.96" size="1.778" layer="95"/>
 <pinref part="C14" gate="G$1" pin="2"/>
+<pinref part="C47" gate="G$1" pin="-"/>
+<wire x1="190.5" y1="190.5" x2="198.12" y2="190.5" width="0.1524" layer="91"/>
+<junction x="198.12" y="190.5"/>
+<pinref part="C48" gate="G$1" pin="2"/>
+<wire x1="213.36" y1="190.5" x2="220.98" y2="190.5" width="0.1524" layer="91"/>
+<junction x="213.36" y="190.5"/>
 </segment>
 <segment>
 <pinref part="C15" gate="G$1" pin="-"/>
 <wire x1="251.46" y1="190.5" x2="236.22" y2="190.5" width="0.1524" layer="91"/>
 <label x="241.3" y="187.96" size="1.778" layer="95"/>
 <pinref part="C16" gate="G$1" pin="2"/>
+<pinref part="C49" gate="G$1" pin="-"/>
+<wire x1="228.6" y1="190.5" x2="236.22" y2="190.5" width="0.1524" layer="91"/>
+<junction x="236.22" y="190.5"/>
+<pinref part="C50" gate="G$1" pin="2"/>
+<wire x1="251.46" y1="190.5" x2="259.08" y2="190.5" width="0.1524" layer="91"/>
+<junction x="251.46" y="190.5"/>
 </segment>
 <segment>
 <pinref part="C17" gate="G$1" pin="2"/>
@@ -17539,6 +17563,10 @@ TL032IDR OpAmp
 <pinref part="C23" gate="G$1" pin="2"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="C46" gate="G$1" pin="2"/>
+<pinref part="GND27" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="5V_POWER_REGULATED" class="0">
 <segment>
@@ -17546,6 +17574,12 @@ TL032IDR OpAmp
 <pinref part="C14" gate="G$1" pin="1"/>
 <wire x1="198.12" y1="198.12" x2="213.36" y2="198.12" width="0.1524" layer="91"/>
 <label x="193.04" y="200.66" size="1.778" layer="95"/>
+<pinref part="C47" gate="G$1" pin="+"/>
+<wire x1="190.5" y1="198.12" x2="198.12" y2="198.12" width="0.1524" layer="91"/>
+<junction x="198.12" y="198.12"/>
+<pinref part="C48" gate="G$1" pin="1"/>
+<wire x1="213.36" y1="198.12" x2="220.98" y2="198.12" width="0.1524" layer="91"/>
+<junction x="213.36" y="198.12"/>
 </segment>
 <segment>
 <pinref part="T1" gate="G$1" pin="VIN"/>
@@ -17581,6 +17615,12 @@ TL032IDR OpAmp
 <pinref part="C16" gate="G$1" pin="1"/>
 <wire x1="236.22" y1="198.12" x2="251.46" y2="198.12" width="0.1524" layer="91"/>
 <label x="231.14" y="200.66" size="1.778" layer="95"/>
+<pinref part="C49" gate="G$1" pin="+"/>
+<wire x1="228.6" y1="198.12" x2="236.22" y2="198.12" width="0.1524" layer="91"/>
+<junction x="236.22" y="198.12"/>
+<pinref part="C50" gate="G$1" pin="1"/>
+<wire x1="251.46" y1="198.12" x2="259.08" y2="198.12" width="0.1524" layer="91"/>
+<junction x="251.46" y="198.12"/>
 </segment>
 <segment>
 <pinref part="T1" gate="G$1" pin="3.3V"/>
@@ -17648,8 +17688,11 @@ TL032IDR OpAmp
 <pinref part="AD8512ARZ" gate="A" pin="1OUT"/>
 <wire x1="203.2" y1="78.74" x2="200.66" y2="78.74" width="0.1524" layer="91"/>
 <junction x="203.2" y="78.74"/>
-<wire x1="203.2" y1="78.74" x2="226.06" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="78.74" x2="213.36" y2="78.74" width="0.1524" layer="91"/>
 <label x="226.06" y="78.74" size="1.778" layer="95"/>
+<pinref part="C46" gate="G$1" pin="1"/>
+<wire x1="213.36" y1="78.74" x2="226.06" y2="78.74" width="0.1524" layer="91"/>
+<junction x="213.36" y="78.74"/>
 </segment>
 </net>
 <net name="ENCODER_A" class="0">
