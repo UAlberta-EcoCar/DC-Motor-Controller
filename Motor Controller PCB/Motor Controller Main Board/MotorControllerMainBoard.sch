@@ -15668,9 +15668,9 @@ NS Package M08A</description>
 <part name="ENCODER_INPUT" library="con-molex-c-grid" deviceset="90130-1?06" device=""/>
 <part name="C21" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:26137/1" value="0.1uf"/>
 <part name="C22" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:26137/1" value="1uf"/>
-<part name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:26137/1" value="3.3k"/>
-<part name="R3" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:26137/1" value="3.3k"/>
-<part name="R4" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:26137/1" value="3.3k"/>
+<part name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="3.3k"/>
+<part name="R3" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="3.3k"/>
+<part name="R4" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="3.3k"/>
 <part name="L1" library="SparkFun (2015_10_14 22_27_04 UTC)" deviceset="INDUCTOR" device="0805" value="42nH"/>
 <part name="AD8512ARZ" library="MotorControllerEagleLibrary" deviceset="TL072CDT" device=""/>
 <part name="R5" library="rcl" deviceset="R-US_" device="R0805" value="100k"/>
@@ -15818,12 +15818,6 @@ circuit protection in this block</text>
 <busses>
 </busses>
 <nets>
-<net name="SAFE_POWER" class="0">
-<segment>
-<wire x1="78.74" y1="182.88" x2="109.22" y2="182.88" width="0.1524" layer="91"/>
-<label x="86.36" y="185.42" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="MOTOR_OUTPUT_(--)" class="0">
 <segment>
 <wire x1="22.86" y1="106.68" x2="30.48" y2="106.68" width="0.1524" layer="91"/>
@@ -15844,16 +15838,25 @@ circuit protection in this block</text>
 <pinref part="U$16" gate="G$1" pin="P$1"/>
 </segment>
 </net>
-<net name="MAIN_POWER_IN(+)" class="0">
+<net name="INPUT_POWER(+)" class="0">
 <segment>
 <label x="22.86" y="170.18" size="1.778" layer="95" rot="R270"/>
 <wire x1="15.24" y1="182.88" x2="25.4" y2="182.88" width="0.1524" layer="91"/>
 <label x="12.7" y="185.42" size="1.778" layer="95"/>
-<wire x1="25.4" y1="182.88" x2="55.88" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="182.88" x2="48.26" y2="182.88" width="0.1524" layer="91"/>
 <junction x="25.4" y="182.88"/>
+<wire x1="48.26" y1="182.88" x2="55.88" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="142.24" x2="25.4" y2="182.88" width="0.1524" layer="91"/>
 <pinref part="U$5" gate="G$1" pin="CATHODE"/>
 <pinref part="U$12" gate="G$1" pin="P$1"/>
+<wire x1="48.26" y1="182.88" x2="48.26" y2="175.26" width="0.1524" layer="91"/>
+<junction x="48.26" y="182.88"/>
+<wire x1="48.26" y1="175.26" x2="93.98" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="182.88" x2="93.98" y2="182.88" width="0.1524" layer="91"/>
+<label x="86.36" y="185.42" size="1.778" layer="95"/>
+<wire x1="93.98" y1="182.88" x2="109.22" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="175.26" x2="93.98" y2="182.88" width="0.1524" layer="91"/>
+<junction x="93.98" y="182.88"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -16311,7 +16314,7 @@ nullify ringing.</text>
 <label x="190.5" y="124.46" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SAFE_POWER" class="0">
+<net name="POWER_INPUT(+)" class="0">
 <segment>
 <pinref part="U$9" gate="G$1" pin="4"/>
 <wire x1="144.78" y1="83.82" x2="144.78" y2="71.12" width="0.1524" layer="91"/>
@@ -16551,7 +16554,7 @@ nullify ringing.</text>
 <wire x1="127" y1="101.6" x2="127" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SAFE_POWER" class="0">
+<net name="POWER_INPUT(+)" class="0">
 <segment>
 <pinref part="U$6" gate="A" pin="VIN"/>
 <wire x1="68.58" y1="180.34" x2="66.04" y2="180.34" width="0.1524" layer="91"/>
@@ -16647,7 +16650,7 @@ Low ESL, Low ESR</text>
 <busses>
 </busses>
 <nets>
-<net name="MAIN_POWER_IN(+)" class="0">
+<net name="INPUT_POWER(+)" class="0">
 <segment>
 <pinref part="C24" gate="A" pin="11"/>
 <wire x1="40.64" y1="157.48" x2="40.64" y2="160.02" width="0.1524" layer="91"/>
@@ -16912,15 +16915,15 @@ TL032IDR OpAmp
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="27.94" y1="50.8" x2="30.48" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="45.72" x2="30.48" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="43.18" x2="43.18" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="43.18" y1="43.18" x2="40.64" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="43.18" x2="43.18" y2="45.72" width="0.1524" layer="91"/>
 <label x="25.4" y="40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="81.28" y1="50.8" x2="83.82" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="45.72" x2="83.82" y2="43.18" width="0.1524" layer="91"/>
 <label x="71.12" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -17019,9 +17022,9 @@ TL032IDR OpAmp
 <segment>
 <pinref part="ENCODER_INPUT" gate="G$1" pin="1"/>
 <wire x1="60.96" y1="63.5" x2="30.48" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="63.5" x2="35.56" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="2"/>
 <label x="45.72" y="63.5" size="1.778" layer="95"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="30.48" y1="55.88" x2="30.48" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ENCODER_B" class="0">
@@ -17033,7 +17036,7 @@ TL032IDR OpAmp
 <segment>
 <pinref part="ENCODER_INPUT" gate="G$1" pin="3"/>
 <wire x1="60.96" y1="60.96" x2="43.18" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="60.96" x2="48.26" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="60.96" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 <label x="45.72" y="60.96" size="1.778" layer="95"/>
 </segment>
@@ -17047,7 +17050,7 @@ TL032IDR OpAmp
 <segment>
 <pinref part="ENCODER_INPUT" gate="G$1" pin="4"/>
 <wire x1="76.2" y1="60.96" x2="83.82" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="60.96" x2="88.9" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="60.96" x2="83.82" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="2"/>
 <label x="76.2" y="60.96" size="1.778" layer="95"/>
 </segment>
@@ -17109,7 +17112,7 @@ TL032IDR OpAmp
 <label x="88.9" y="116.84" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SAFE_POWER" class="0">
+<net name="POWER_INPUT(+)" class="0">
 <segment>
 <pinref part="R5" gate="G$1" pin="1"/>
 <label x="134.62" y="68.58" size="1.778" layer="95"/>
