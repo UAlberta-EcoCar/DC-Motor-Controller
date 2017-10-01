@@ -19656,12 +19656,22 @@ BZT52C4V7-TP Zener Diode</text>
 <label x="17.78" y="86.36" size="1.778" layer="95"/>
 <pinref part="J2" gate="G$1" pin="5"/>
 </segment>
+<segment>
+<pinref part="T1" gate="G$1" pin="3/CAN-TX/PWM"/>
+<wire x1="116.84" y1="154.94" x2="114.3" y2="154.94" width="0.1524" layer="91"/>
+<label x="104.14" y="154.94" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="BUTTON2" class="0">
 <segment>
 <wire x1="30.48" y1="83.82" x2="27.94" y2="83.82" width="0.1524" layer="91"/>
 <label x="17.78" y="83.82" size="1.778" layer="95"/>
 <pinref part="J2" gate="G$1" pin="7"/>
+</segment>
+<segment>
+<pinref part="T1" gate="G$1" pin="4/CAN-RX-PWM"/>
+<wire x1="116.84" y1="152.4" x2="114.3" y2="152.4" width="0.1524" layer="91"/>
+<label x="104.14" y="152.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="HALL" class="0">
