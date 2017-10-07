@@ -2,8 +2,14 @@
 #define PID_HPP
 
 #include "mbed.h"
-#include "rtos.h"
+//#include "rtos.h"
 #include <limits.h>
+
+//constants
+#define max_p 255
+#define max_i 255
+#define max_d 255
+#define num_samples 32 //number of ADC samples per cycle
 
 
 ////////////////////
@@ -16,7 +22,7 @@ class PID {
   public:
 
     //variables
-    int64_t duty_cycle;    //output to the actuator (eg motor)
+    int32_t duty_cycle;    //output to the actuator (eg motor)
   	float p, i, d;
     uint16_t ADC_value;
   	int32_t sum;           //sum for the Integral term
@@ -24,12 +30,15 @@ class PID {
   	int32_t error;         //error with respect to the reference, used for calculating the slope
   	int32_t slope;         //used for the Derivative term
   	int32_t previous_cycle;//previous error value, used to calculate the Derivative term
-  	uint16_t num_samples;  //number of ADC samples per cycle
   	AnalogIn *feedBack;    //ADC object used for feedback, eg a current sensor
+    uint32_t max_sum;
+    uint32_t p_saturation;
+    uint32_t i_saturation;
+    uint32_t d_saturation;
 
   	//constructors
-  	PID();
-  	PID(AnalogIn *feedBack, uint16_t num_samples, float p, float i, float d); //feedBack is a pointer to an ADC object, for current sensing
+    PID();
+  	PID(AnalogIn *feedBack, float p, float i, float d, uint32_t max_sum, uint32_t p_saturation, uint32_t i_saturation, uint32_t d_saturation); //feedBack is a pointer to an ADC object, for current sensing
 
   	//methods
   	uint16_t PID_calc(); //needs to be called every cycle
