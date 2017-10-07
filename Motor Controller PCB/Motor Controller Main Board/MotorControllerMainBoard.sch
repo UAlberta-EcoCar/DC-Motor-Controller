@@ -18065,6 +18065,8 @@ Source: http://www.diodes.com/datasheets/ds31262.pdf</description>
 <part name="R14" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="4.7k"/>
 <part name="J2" library="SparkFun-Connectors" deviceset="M04X2" device=""/>
 <part name="J3" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
+<part name="R15" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="10k"/>
+<part name="R16" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -19147,6 +19149,8 @@ BZT52C4V7-TP Zener Diode</text>
 <instance part="R14" gate="G$1" x="53.34" y="116.84" rot="R270"/>
 <instance part="J2" gate="G$1" x="38.1" y="86.36"/>
 <instance part="J3" gate="J$1" x="91.44" y="86.36"/>
+<instance part="R15" gate="G$1" x="12.7" y="78.74" rot="R270"/>
+<instance part="R16" gate="G$1" x="27.94" y="78.74" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -19273,6 +19277,16 @@ BZT52C4V7-TP Zener Diode</text>
 <pinref part="J3" gate="J$1" pin="1"/>
 <wire x1="99.06" y1="83.82" x2="101.6" y2="83.82" width="0.1524" layer="91"/>
 <label x="99.06" y="83.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R15" gate="G$1" pin="2"/>
+<wire x1="12.7" y1="73.66" x2="12.7" y2="71.12" width="0.1524" layer="91"/>
+<label x="12.7" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R16" gate="G$1" pin="2"/>
+<wire x1="27.94" y1="73.66" x2="27.94" y2="71.12" width="0.1524" layer="91"/>
+<label x="27.94" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="5V_POWER_REGULATED" class="0">
@@ -19652,9 +19666,11 @@ BZT52C4V7-TP Zener Diode</text>
 </net>
 <net name="BUTTON1" class="0">
 <segment>
-<wire x1="30.48" y1="86.36" x2="27.94" y2="86.36" width="0.1524" layer="91"/>
-<label x="17.78" y="86.36" size="1.778" layer="95"/>
+<label x="10.16" y="86.36" size="1.778" layer="95"/>
 <pinref part="J2" gate="G$1" pin="5"/>
+<wire x1="30.48" y1="86.36" x2="12.7" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="86.36" x2="12.7" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="R15" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="T1" gate="G$1" pin="3/CAN-TX/PWM"/>
@@ -19665,8 +19681,9 @@ BZT52C4V7-TP Zener Diode</text>
 <net name="BUTTON2" class="0">
 <segment>
 <wire x1="30.48" y1="83.82" x2="27.94" y2="83.82" width="0.1524" layer="91"/>
-<label x="17.78" y="83.82" size="1.778" layer="95"/>
+<label x="20.32" y="83.82" size="1.778" layer="95"/>
 <pinref part="J2" gate="G$1" pin="7"/>
+<pinref part="R16" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="T1" gate="G$1" pin="4/CAN-RX-PWM"/>
