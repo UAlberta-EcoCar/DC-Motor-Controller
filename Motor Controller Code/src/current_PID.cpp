@@ -47,3 +47,9 @@ void current_PID::set_reference_current(double current) { //sets reference curre
   reference = (uint16_t)round(((current - current_intercept) / current_slope) * (65536 / 3.3));
 
 }
+
+double current_PID::get_current() {
+
+  return (double)((ADC_value / 65536.0 * 3.3) * current_slope + current_intercept);
+
+}

@@ -10,13 +10,14 @@ class current_PID : public PID {
 
   public:
 
-    double current_slope;
-    double current_intercept;
-    double current_reference;
+    double current_slope;     //slope of the current sensor voltage/current curve, in mA/V
+    double current_intercept; //intercept of the current sensor voltage/current curve, in mA
+    double current_reference; //desired current setpoint
 
     //methods
 
     void set_reference_current(double current); //sets reference current (in mA)
+    double get_current();
 
     //constructors
 
