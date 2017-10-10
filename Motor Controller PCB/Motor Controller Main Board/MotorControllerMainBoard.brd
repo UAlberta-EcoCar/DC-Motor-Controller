@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.2">
+<eagle version="8.3.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -196,6 +196,8 @@
 <text x="17.6" y="46.3" size="1" layer="21">Enable</text>
 <text x="28.7" y="46.3" size="1" layer="21">Enable</text>
 <text x="28.6" y="41.2" size="1" layer="21">Enable</text>
+<text x="58.8" y="63.9" size="1.778" layer="22" rot="MR0">DC Motor Controller</text>
+<text x="61.4" y="56.3" size="1.778" layer="22" rot="MR0">Ordered 2017_10_10</text>
 </plain>
 <libraries>
 <library name="MotorControllerEagleLibrary">
