@@ -2,7 +2,7 @@
  * Copyright (c) 2014, WH
  *               2014, v01: WH, Extracted from TextLCD.h as of v14
  *               2015, v02: WH, Added some UDC definitions and commented out several UDCs
- *               2015, v03: WH, Added some UDC definitions 
+ *               2015, v03: WH, Added some UDC definitions
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -51,7 +51,7 @@ extern const char udc_3[];       // ||
 extern const char udc_4[];       // |||
 extern const char udc_5[];       // =
 extern const char udc_6[];       // checkerboard
-extern const char udc_7[];       // \
+extern const char udc_7[];       // 
 
 //extern const char udc_degr[];    // Degree symbol
 
@@ -99,7 +99,7 @@ extern const char udc_smiley[];  // Smiley
 //extern const char udc_Euro[];     // Euro symbol
 //extern const char udc_key[];      // Key symbol
 
-//extern const char udc_None[]; 
+//extern const char udc_None[];
 //extern const char udc_All[];
 #endif /* LCD_UDC Examples */
 

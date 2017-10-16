@@ -158,7 +158,7 @@ protected:
 class Adafruit_SSD1306_I2c : public Adafruit_SSD1306
 {
 public:
-	#define SSD_I2C_ADDRESS     0x78
+	#define SSD_I2C_ADDRESS     0x3C
 	/** Create a SSD1306 I2C transport display driver instance with the specified RST pin name, the I2C address, as well as the display dimensions
 	 *
 	 * Required parameters
