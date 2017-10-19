@@ -86,13 +86,13 @@ void Historigram::run_historigram(void){
 		display.setTextCursor(0,0);
 
 		display.printf("%s\n", target_value_name.c_str());
-		display.printf("%f\n", target_value);
+		display.printf("%4.3f\n", target_value);
 
         findAverage();
 
 		//Print Average Values
 		display.printf("AVERAGE\n");
-		display.printf("%f\n", average);
+		display.printf("%4.3f\n", average);
 
         drawScale();
 
