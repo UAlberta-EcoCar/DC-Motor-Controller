@@ -42,7 +42,7 @@ current_PID::current_PID(AnalogIn *feedBack, double current_slope, double curren
 
 //method definitions
 
-void current_PID::set_reference_current(double current) { //sets reference current (in mA)
+void current_PID::set_reference_current(double current) { //sets reference current (in A)
 
   reference = (uint16_t)round(((current - current_intercept) / current_slope) * (65536 / 3.3));
 

@@ -19,7 +19,7 @@ AnalogIn current_sensor(PTC1); //current sensor for feedback
 PwmOut output(PTD5);           //pwm output to motor driver
 Serial serial(PTB17, PTB16);   // tx, rx
 
-//current PID control; Parameters: feedback, slope (mA/v), intercept (mA), P, I, D, max sum, P saturation, I saturation, D saturation
+//current PID control; Parameters: feedback, slope (A/V), intercept (A), P, I, D, max sum, P saturation, I saturation, D saturation
 current_PID current_control(&current_sensor, 277.778, 0, 0, 1, 0, 10000000, 20000, 65535, 0);
 //note: the duty cycle is a 16 bit unsigned int, saturation values for P, I and D and be between 0-65535
 
