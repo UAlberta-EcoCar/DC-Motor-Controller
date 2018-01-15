@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.0">
+<eagle version="8.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -923,6 +923,33 @@
 <pin name="GND" x="0" y="-17.78" visible="off" length="point"/>
 </symbol>
 <symbol name="TRANSFORMER_750313974">
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="1.27" width="0.1524" layer="94" curve="-180"/>
+<wire x1="-2.54" y1="1.27" x2="-2.54" y2="0" width="0.1524" layer="94" curve="-180"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="-1.27" width="0.1524" layer="94" curve="-180"/>
+<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="-2.54" width="0.1524" layer="94" curve="-180"/>
+<wire x1="0" y1="0" x2="0" y2="1.27" width="0.1524" layer="94" curve="-180"/>
+<wire x1="0" y1="1.27" x2="0" y2="2.54" width="0.1524" layer="94" curve="-180"/>
+<wire x1="0" y1="2.54" x2="0" y2="3.81" width="0.1524" layer="94" curve="-180"/>
+<wire x1="0" y1="3.81" x2="0" y2="5.08" width="0.1524" layer="94" curve="-180"/>
+<wire x1="0" y1="-7.62" x2="0" y2="-6.35" width="0.1524" layer="94" curve="-180"/>
+<wire x1="0" y1="-6.35" x2="0" y2="-5.08" width="0.1524" layer="94" curve="-180"/>
+<wire x1="0" y1="-5.08" x2="0" y2="-3.81" width="0.1524" layer="94" curve="-180"/>
+<wire x1="-2.54" y1="2.54" x2="-5.08" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-5.08" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-1.524" y1="5.08" x2="-1.524" y2="-7.62" width="0.1524" layer="94"/>
+<wire x1="-1.016" y1="5.08" x2="-1.016" y2="-7.62" width="0.1524" layer="94"/>
+<circle x="-2.794" y="2.032" radius="0.0635" width="0.508" layer="94"/>
+<wire x1="0" y1="-3.81" x2="0" y2="-2.54" width="0.1524" layer="94" curve="-180"/>
+<wire x1="0" y1="5.08" x2="2.54" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-7.62" x2="2.54" y2="-7.62" width="0.1524" layer="94"/>
+<pin name="1" x="-5.08" y="2.54" visible="off" length="point"/>
+<pin name="4" x="-5.08" y="-2.54" visible="off" length="point"/>
+<pin name="6" x="2.54" y="5.08" visible="off" length="point"/>
+<pin name="8" x="2.54" y="0" visible="off" length="point"/>
+<pin name="5" x="2.54" y="-2.54" visible="off" length="point"/>
+<pin name="7" x="2.54" y="-7.62" visible="off" length="point"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1252,6 +1279,26 @@
 <connect gate="G$1" pin="RFB" pad="3.RFB"/>
 <connect gate="G$1" pin="SW" pad="4.SW"/>
 <connect gate="G$1" pin="VIN" pad="5.VIN"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="750313974">
+<gates>
+<gate name="G$1" symbol="TRANSFORMER_750313974" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="750313974_TRANSFORMER">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
 </connects>
 <technologies>
 <technology name=""/>
