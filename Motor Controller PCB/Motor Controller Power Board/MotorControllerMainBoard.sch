@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.0">
+<eagle version="8.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -687,6 +687,14 @@ by exp-lbrs.ulp</description>
 <text x="-2.4" y="3.1" size="1.778" layer="21">1mF</text>
 <text x="-2.2" y="-5.3" size="1.778" layer="21">50V</text>
 </package>
+<package name="DA-T263-101E">
+<smd name="P$1" x="-9.05" y="0" dx="15" dy="2" layer="1" rot="R90"/>
+<smd name="P$2" x="9.05" y="0" dx="15" dy="2" layer="1" rot="R90"/>
+<wire x1="-13" y1="8" x2="13" y2="8" width="0.1524" layer="21"/>
+<wire x1="-13" y1="-8" x2="13" y2="-8" width="0.1524" layer="21"/>
+<wire x1="-13" y1="8" x2="-13" y2="-8" width="0.1524" layer="21"/>
+<wire x1="13" y1="8" x2="13" y2="-8" width="0.1524" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="NMOS">
@@ -926,6 +934,60 @@ by exp-lbrs.ulp</description>
 <text x="-2.54" y="-5.08" size="1.778" layer="94" rot="R90">&gt;NAME</text>
 <text x="5.08" y="-2.54" size="1.778" layer="94" rot="R90">&gt;VALUE</text>
 </symbol>
+<symbol name="DA-T263-101E">
+<wire x1="-8.382" y1="0" x2="7.62" y2="0" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="0" x2="7.62" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="6.858" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="6.858" y1="5.08" x2="6.858" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="6.858" y1="0.762" x2="6.35" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="6.35" y1="0.762" x2="6.35" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="6.35" y1="5.08" x2="5.588" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="5.588" y1="5.08" x2="5.588" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="5.588" y1="0.762" x2="5.08" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0.762" x2="5.08" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="4.318" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="4.318" y1="5.08" x2="4.318" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="4.318" y1="0.762" x2="3.81" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="0.762" x2="3.81" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="5.08" x2="3.048" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="3.048" y1="5.08" x2="3.048" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="3.048" y1="0.762" x2="2.54" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0.762" x2="2.54" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="5.08" x2="1.778" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="1.778" y1="5.08" x2="1.778" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="1.778" y1="0.762" x2="1.27" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0.762" x2="1.27" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="5.08" x2="0.508" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="5.08" x2="0.508" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0.762" x2="0" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="0" y1="0.762" x2="0" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="0" y1="5.08" x2="-0.762" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="5.08" x2="-0.762" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="0.762" x2="-1.27" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0.762" x2="-1.27" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="5.08" x2="-2.032" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-2.032" y1="5.08" x2="-2.032" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-2.032" y1="0.762" x2="-2.54" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0.762" x2="-2.54" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="-3.302" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-3.302" y1="5.08" x2="-3.302" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-3.302" y1="0.762" x2="-3.81" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-3.81" y1="0.762" x2="-3.81" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-3.81" y1="5.08" x2="-4.572" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-4.572" y1="5.08" x2="-4.572" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-4.572" y1="0.762" x2="-5.08" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="0.762" x2="-5.08" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="5.08" x2="-5.842" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-5.842" y1="5.08" x2="-5.842" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-5.842" y1="0.762" x2="-6.35" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-6.35" y1="0.762" x2="-6.35" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-6.35" y1="5.08" x2="-7.112" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-7.112" y1="5.08" x2="-7.112" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-7.112" y1="0.762" x2="-7.62" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-7.62" y1="0.762" x2="-7.62" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-7.62" y1="5.08" x2="-8.382" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-8.382" y1="5.08" x2="-8.382" y2="0" width="0.1524" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="NTMFS5C426NT1G">
@@ -1160,6 +1222,18 @@ by exp-lbrs.ulp</description>
 <connect gate="G$1" pin="NEGATIVE" pad="NEGATIVE"/>
 <connect gate="G$1" pin="POSITIVE" pad="POSITIVE"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DA-T263-101E">
+<gates>
+<gate name="G$1" symbol="DA-T263-101E" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DA-T263-101E">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -10939,7 +11013,7 @@ Source: AVX .. aphvc.pdf</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="C-EU" urn="urn:adsk.eagle:component:23793/41" prefix="C" uservalue="yes" library_version="2">
+<deviceset name="C-EU" urn="urn:adsk.eagle:component:23793/42" prefix="C" uservalue="yes" library_version="3">
 <description>&lt;B&gt;CAPACITOR&lt;/B&gt;, European symbol</description>
 <gates>
 <gate name="G$1" symbol="C-EU" x="0" y="0"/>
@@ -10954,7 +11028,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23626/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C0504" package="C0504">
@@ -10966,7 +11042,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23624/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C0603" package="C0603">
@@ -10978,7 +11056,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23616/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C0805" package="C0805">
@@ -10990,7 +11070,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23617/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C1206" package="C1206">
@@ -11002,7 +11084,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23618/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C1210" package="C1210">
@@ -11014,7 +11098,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23619/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C1310" package="C1310">
@@ -11026,7 +11112,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23620/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C1608" package="C1608">
@@ -11038,7 +11126,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23621/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C1812" package="C1812">
@@ -11050,7 +11140,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23622/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C1825" package="C1825">
@@ -11062,7 +11154,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23623/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C2012" package="C2012">
@@ -11074,7 +11168,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23625/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C3216" package="C3216">
@@ -11086,7 +11182,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23628/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C3225" package="C3225">
@@ -11098,7 +11196,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23655/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C4532" package="C4532">
@@ -11110,7 +11210,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23627/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C4564" package="C4564">
@@ -11122,7 +11224,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23648/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="025-024X044" package="C025-024X044">
@@ -11134,7 +11238,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23630/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="025-025X050" package="C025-025X050">
@@ -11146,7 +11252,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23629/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="025-030X050" package="C025-030X050">
@@ -11158,7 +11266,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23631/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="025-040X050" package="C025-040X050">
@@ -11170,7 +11280,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23634/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="025-050X050" package="C025-050X050">
@@ -11182,7 +11294,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23633/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="025-060X050" package="C025-060X050">
@@ -11194,7 +11308,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23632/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C025_050-024X070" package="C025_050-024X070">
@@ -11206,7 +11322,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23639/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="025_050-025X075" package="C025_050-025X075">
@@ -11218,7 +11336,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23641/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="025_050-035X075" package="C025_050-035X075">
@@ -11230,7 +11350,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23651/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="025_050-045X075" package="C025_050-045X075">
@@ -11242,7 +11364,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23635/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="025_050-055X075" package="C025_050-055X075">
@@ -11254,7 +11378,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23636/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="050-024X044" package="C050-024X044">
@@ -11266,7 +11392,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23643/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="050-025X075" package="C050-025X075">
@@ -11278,7 +11406,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23637/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="050-045X075" package="C050-045X075">
@@ -11290,7 +11420,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23638/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="050-030X075" package="C050-030X075">
@@ -11302,7 +11434,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23640/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="050-050X075" package="C050-050X075">
@@ -11314,7 +11448,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23665/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="050-055X075" package="C050-055X075">
@@ -11326,7 +11462,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23642/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="050-075X075" package="C050-075X075">
@@ -11338,7 +11476,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23645/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="050H075X075" package="C050H075X075">
@@ -11350,7 +11490,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23644/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="075-032X103" package="C075-032X103">
@@ -11362,7 +11504,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23646/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="075-042X103" package="C075-042X103">
@@ -11374,7 +11518,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23656/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="075-052X106" package="C075-052X106">
@@ -11386,7 +11532,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23650/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="102-043X133" package="C102-043X133">
@@ -11398,7 +11546,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23647/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="102-054X133" package="C102-054X133">
@@ -11410,7 +11560,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23649/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="102-064X133" package="C102-064X133">
@@ -11422,7 +11574,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23653/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="102_152-062X184" package="C102_152-062X184">
@@ -11434,7 +11588,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23652/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="150-054X183" package="C150-054X183">
@@ -11446,7 +11602,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23669/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="150-064X183" package="C150-064X183">
@@ -11458,7 +11616,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23654/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="150-072X183" package="C150-072X183">
@@ -11470,7 +11630,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23657/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="150-084X183" package="C150-084X183">
@@ -11482,7 +11644,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23658/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="150-091X182" package="C150-091X182">
@@ -11494,7 +11658,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23659/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="225-062X268" package="C225-062X268">
@@ -11506,7 +11672,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23661/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="225-074X268" package="C225-074X268">
@@ -11518,7 +11686,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23660/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="225-087X268" package="C225-087X268">
@@ -11530,7 +11700,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23662/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="225-108X268" package="C225-108X268">
@@ -11542,7 +11714,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23663/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="225-113X268" package="C225-113X268">
@@ -11554,7 +11728,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23667/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="275-093X316" package="C275-093X316">
@@ -11566,7 +11742,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23701/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="275-113X316" package="C275-113X316">
@@ -11578,7 +11756,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23673/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="275-134X316" package="C275-134X316">
@@ -11590,7 +11770,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23664/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="275-205X316" package="C275-205X316">
@@ -11602,7 +11784,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23666/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="325-137X374" package="C325-137X374">
@@ -11614,7 +11798,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23672/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="325-162X374" package="C325-162X374">
@@ -11626,7 +11812,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23670/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="325-182X374" package="C325-182X374">
@@ -11638,7 +11826,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23668/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="375-192X418" package="C375-192X418">
@@ -11650,7 +11840,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23674/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="375-203X418" package="C375-203X418">
@@ -11662,7 +11854,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23671/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="050-035X075" package="C050-035X075">
@@ -11674,7 +11868,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23677/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="375-155X418" package="C375-155X418">
@@ -11686,7 +11882,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23675/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="075-063X106" package="C075-063X106">
@@ -11698,7 +11896,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23678/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="275-154X316" package="C275-154X316">
@@ -11710,7 +11910,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23685/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="275-173X316" package="C275-173X316">
@@ -11722,7 +11924,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23676/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C0402K" package="C0402K">
@@ -11734,7 +11938,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23679/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C0603K" package="C0603K">
@@ -11746,7 +11952,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23680/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C0805K" package="C0805K">
@@ -11758,7 +11966,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23681/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C1206K" package="C1206K">
@@ -11770,7 +11980,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23682/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C1210K" package="C1210K">
@@ -11782,7 +11994,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23683/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C1812K" package="C1812K">
@@ -11794,7 +12008,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23686/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C1825K" package="C1825K">
@@ -11806,7 +12022,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23684/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C2220K" package="C2220K">
@@ -11818,7 +12036,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23687/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C2225K" package="C2225K">
@@ -11830,7 +12050,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23692/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="HPC0201" package="HPC0201">
@@ -11842,7 +12064,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23688/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C0201" package="C0201">
@@ -11854,7 +12078,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23690/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C1808" package="C1808">
@@ -11866,7 +12092,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23689/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="C3640" package="C3640">
@@ -11878,7 +12106,9 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23693/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="01005" package="C01005">
@@ -11890,10 +12120,18 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:23691/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SPICEPREFIX" value="C" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
+<spice>
+<pinmapping spiceprefix="C">
+<pinmap gate="G$1" pin="1" pinorder="1"/>
+<pinmap gate="G$1" pin="2" pinorder="2"/>
+</pinmapping>
+</spice>
 </deviceset>
 </devicesets>
 </library>
@@ -14259,10 +14497,6 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <description>LED
 3 mm, round</description>
 </package3d>
-<package3d name="LED5MM" urn="urn:adsk.eagle:package:15799/1" type="box" library_version="1">
-<description>LED
-5 mm, round</description>
-</package3d>
 <package3d name="LSU260" urn="urn:adsk.eagle:package:15805/1" type="box" library_version="1">
 <description>LED
 1 mm, round, Siemens</description>
@@ -14336,31 +14570,13 @@ Source: http://www.osram.convergy.de/ ... LA_LO_LS_LY Y876.pdf</description>
 <description>Power TOPLED®
 Source: http://www.osram.convergy.de/ ... LA_LO_LA_LY E67B.pdf</description>
 </package3d>
-<package3d name="CHIP-LED0603" urn="urn:adsk.eagle:package:15819/1" type="box" library_version="1">
-<description>Hyper CHIPLED Hyper-Bright LED
-LB Q993
-Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
-</package3d>
-<package3d name="CHIP-LED0805" urn="urn:adsk.eagle:package:15818/1" type="box" library_version="1">
-<description>Hyper CHIPLED Hyper-Bright LED
-LB R99A
-Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
-</package3d>
 <package3d name="MINI-TOPLED-SANTANA" urn="urn:adsk.eagle:package:15820/1" type="box" library_version="1">
 <description>Mini TOPLED Santana®
 Source: http://www.osram.convergy.de/ ... LG M470.pdf</description>
 </package3d>
-<package3d name="CHIPLED_0805" urn="urn:adsk.eagle:package:15821/1" type="box" library_version="1">
-<description>CHIPLED
-Source: http://www.osram.convergy.de/ ... LG_R971.pdf</description>
-</package3d>
-<package3d name="CHIPLED_1206" urn="urn:adsk.eagle:package:15823/1" type="box" library_version="1">
+<package3d name="CHIPLED_1206" urn="urn:adsk.eagle:package:15823/2" type="model" library_version="2">
 <description>CHIPLED
 Source: http://www.osram.convergy.de/ ... LG_LY N971.pdf</description>
-</package3d>
-<package3d name="CHIPLED_0603" urn="urn:adsk.eagle:package:15822/1" type="box" library_version="1">
-<description>CHIPLED
-Source: http://www.osram.convergy.de/ ... LG_LY Q971.pdf</description>
 </package3d>
 <package3d name="CHIPLED-0603-TTW" urn="urn:adsk.eagle:package:15824/1" type="box" library_version="1">
 <description>CHIPLED-0603
@@ -14427,6 +14643,28 @@ Y3KSUPER YELLOW
 
 Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 </package3d>
+<package3d name="LED5MM" urn="urn:adsk.eagle:package:15799/2" type="model" library_version="2">
+<description>LED
+5 mm, round</description>
+</package3d>
+<package3d name="CHIP-LED0603" urn="urn:adsk.eagle:package:15819/3" type="model" library_version="2">
+<description>Hyper CHIPLED Hyper-Bright LED
+LB Q993
+Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
+</package3d>
+<package3d name="CHIP-LED0805" urn="urn:adsk.eagle:package:15818/2" type="model" library_version="2">
+<description>Hyper CHIPLED Hyper-Bright LED
+LB R99A
+Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
+</package3d>
+<package3d name="CHIPLED_0805" urn="urn:adsk.eagle:package:15821/2" type="model" library_version="2">
+<description>CHIPLED
+Source: http://www.osram.convergy.de/ ... LG_R971.pdf</description>
+</package3d>
+<package3d name="CHIPLED_0603" urn="urn:adsk.eagle:package:15822/2" type="model" library_version="2">
+<description>CHIPLED
+Source: http://www.osram.convergy.de/ ... LG_LY Q971.pdf</description>
+</package3d>
 </packages3d>
 <symbols>
 <symbol name="LED" urn="urn:adsk.eagle:symbol:15639/1" library_version="1">
@@ -14456,7 +14694,7 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="LED" urn="urn:adsk.eagle:component:15916/1" prefix="LED" uservalue="yes" library_version="1">
+<deviceset name="LED" urn="urn:adsk.eagle:component:15916/7" prefix="LED" uservalue="yes" library_version="2">
 <description>&lt;b&gt;LED&lt;/b&gt;&lt;p&gt;
 &lt;u&gt;OSRAM&lt;/u&gt;:&lt;br&gt;
 
@@ -14590,7 +14828,7 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="C" pad="K"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:15799/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:15799/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -14806,7 +15044,7 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:15819/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:15819/3"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -14818,7 +15056,7 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:15818/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:15818/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -14842,7 +15080,7 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:15821/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:15821/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -14854,7 +15092,7 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:15823/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:15823/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -14866,7 +15104,7 @@ Source: www.kingbright.com</description>
 <connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:15822/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:15822/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -15056,7 +15294,7 @@ Source: www.kingbright.com</description>
 <part name="U1" library="MotorControllerEagleLibrary" deviceset="CDBA340L-G" device=""/>
 <part name="C8" library="MotorControllerEagleLibrary" deviceset="EEUFR1H221B" device=""/>
 <part name="U$11" library="MotorControllerEagleLibrary" deviceset="AL5809-20S1-7" device=""/>
-<part name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/1"/>
+<part name="PWR_CONFIRM" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/2" value="RED"/>
 <part name="GND22" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="U$10" library="MotorControllerEagleLibrary" deviceset="EEU-FM1H102B" device=""/>
 <part name="U$13" library="MotorControllerEagleLibrary" deviceset="EEU-FM1H102B" device=""/>
@@ -15074,7 +15312,9 @@ Source: www.kingbright.com</description>
 <part name="SV8" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA04-1" device="" package3d_urn="urn:adsk.eagle:package:8337/1"/>
 <part name="SV9" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA04-1" device="" package3d_urn="urn:adsk.eagle:package:8337/1"/>
 <part name="U$22" library="MotorControllerEagleLibrary" deviceset="AL5809-20S1-7" device=""/>
-<part name="LED4" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/1"/>
+<part name="3.3_CONFIRM" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/2" value="RED"/>
+<part name="GND10" library="E-P-008-R1.2" deviceset="GND" device=""/>
+<part name="U$23" library="MotorControllerEagleLibrary" deviceset="DA-T263-101E" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15114,6 +15354,7 @@ Connected HERE</text>
 <text x="175.26" y="25.4" size="2.286" layer="94">Keep it looking neat. Use other sheets to make complicated circuits</text>
 <text x="20.32" y="58.42" size="1.778" layer="91">Terminal Block (Negative)</text>
 <text x="236.22" y="121.92" size="1.778" layer="91">For Mounting</text>
+<text x="43.18" y="137.16" size="1.778" layer="91">Heatsink</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -15126,7 +15367,7 @@ Connected HERE</text>
 <instance part="U$15" gate="G$1" x="187.96" y="147.32" rot="R180"/>
 <instance part="U$16" gate="G$1" x="15.24" y="106.68"/>
 <instance part="U$11" gate="G$1" x="182.88" y="101.6" rot="R180"/>
-<instance part="LED1" gate="G$1" x="182.88" y="88.9"/>
+<instance part="PWR_CONFIRM" gate="G$1" x="182.88" y="88.9"/>
 <instance part="GND22" gate="1" x="182.88" y="76.2"/>
 <instance part="SV5" gate="1" x="266.7" y="86.36" rot="R180"/>
 <instance part="SV6" gate="1" x="266.7" y="106.68" rot="R180"/>
@@ -15134,7 +15375,9 @@ Connected HERE</text>
 <instance part="SV8" gate="1" x="266.7" y="187.96" rot="R180"/>
 <instance part="SV9" gate="1" x="266.7" y="170.18" rot="R180"/>
 <instance part="U$22" gate="G$1" x="205.74" y="101.6" rot="R180"/>
-<instance part="LED4" gate="G$1" x="205.74" y="88.9"/>
+<instance part="3.3_CONFIRM" gate="G$1" x="205.74" y="88.9"/>
+<instance part="GND10" gate="1" x="251.46" y="109.22"/>
+<instance part="U$23" gate="G$1" x="38.1" y="139.7" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -15205,7 +15448,7 @@ Connected HERE</text>
 <pinref part="GND26" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="LED1" gate="G$1" pin="C"/>
+<pinref part="PWR_CONFIRM" gate="G$1" pin="C"/>
 <wire x1="182.88" y1="83.82" x2="182.88" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="GND22" gate="1" pin="GND"/>
 </segment>
@@ -15223,6 +15466,41 @@ Connected HERE</text>
 <pinref part="SV8" gate="1" pin="4"/>
 <wire x1="259.08" y1="185.42" x2="226.06" y2="185.42" width="0.1524" layer="91"/>
 <label x="226.06" y="185.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SV7" gate="1" pin="1"/>
+<wire x1="259.08" y1="127" x2="256.54" y2="127" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="127" x2="256.54" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="SV7" gate="1" pin="4"/>
+<wire x1="256.54" y1="124.46" x2="256.54" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="121.92" x2="256.54" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="119.38" x2="259.08" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="SV7" gate="1" pin="2"/>
+<wire x1="259.08" y1="124.46" x2="256.54" y2="124.46" width="0.1524" layer="91"/>
+<junction x="256.54" y="124.46"/>
+<pinref part="SV7" gate="1" pin="3"/>
+<wire x1="259.08" y1="121.92" x2="256.54" y2="121.92" width="0.1524" layer="91"/>
+<junction x="256.54" y="121.92"/>
+<pinref part="SV6" gate="1" pin="1"/>
+<wire x1="259.08" y1="111.76" x2="256.54" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="SV6" gate="1" pin="4"/>
+<wire x1="256.54" y1="111.76" x2="256.54" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="109.22" x2="256.54" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="106.68" x2="256.54" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="104.14" x2="259.08" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="SV6" gate="1" pin="3"/>
+<wire x1="259.08" y1="106.68" x2="256.54" y2="106.68" width="0.1524" layer="91"/>
+<junction x="256.54" y="106.68"/>
+<pinref part="SV6" gate="1" pin="2"/>
+<wire x1="259.08" y1="109.22" x2="256.54" y2="109.22" width="0.1524" layer="91"/>
+<junction x="256.54" y="109.22"/>
+<junction x="256.54" y="119.38"/>
+<junction x="256.54" y="111.76"/>
+<wire x1="256.54" y1="114.3" x2="256.54" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="119.38" x2="256.54" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="114.3" x2="251.46" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+<wire x1="251.46" y1="114.3" x2="251.46" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FET_DRIVER_SIGNAL" class="0">
@@ -15288,7 +15566,7 @@ Connected HERE</text>
 <net name="N$17" class="0">
 <segment>
 <pinref part="U$11" gate="G$1" pin="C"/>
-<pinref part="LED1" gate="G$1" pin="A"/>
+<pinref part="PWR_CONFIRM" gate="G$1" pin="A"/>
 <wire x1="182.88" y1="96.52" x2="182.88" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -15304,7 +15582,7 @@ Connected HERE</text>
 <label x="226.06" y="167.64" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="LED4" gate="G$1" pin="C"/>
+<pinref part="3.3_CONFIRM" gate="G$1" pin="C"/>
 <wire x1="205.74" y1="83.82" x2="205.74" y2="78.74" width="0.1524" layer="91"/>
 <label x="198.12" y="76.2" size="1.778" layer="95"/>
 </segment>
@@ -15341,7 +15619,7 @@ Connected HERE</text>
 <net name="N$14" class="0">
 <segment>
 <pinref part="U$22" gate="G$1" pin="C"/>
-<pinref part="LED4" gate="G$1" pin="A"/>
+<pinref part="3.3_CONFIRM" gate="G$1" pin="A"/>
 <wire x1="205.74" y1="96.52" x2="205.74" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -16056,6 +16334,12 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="8.4" severity="warning">
+Since Version 8.4, EAGLE supports properties for SPICE simulation. 
+Probes in schematics and SPICE mapping objects found in parts and library devices
+will not be understood with this version. Update EAGLE to the latest version
+for full support of SPICE simulation. 
 </note>
 </compatibility>
 </eagle>

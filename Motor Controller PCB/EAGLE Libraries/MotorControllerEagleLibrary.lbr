@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.0">
+<eagle version="8.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1071,6 +1071,14 @@ Source: http://focus.ti.com/lit/ds/symlink/tlc27l2.pdf</description>
 <wire x1="1.35" y1="-0.775" x2="-1.35" y2="-0.775" width="0.127" layer="51"/>
 <wire x1="-1.35" y1="-0.775" x2="-1.35" y2="0.775" width="0.127" layer="51"/>
 </package>
+<package name="DA-T263-101E">
+<smd name="P$1" x="-9.05" y="0" dx="15" dy="2" layer="1" rot="R90"/>
+<smd name="P$2" x="9.05" y="0" dx="15" dy="2" layer="1" rot="R90"/>
+<wire x1="-13" y1="8" x2="13" y2="8" width="0.1524" layer="21"/>
+<wire x1="-13" y1="-8" x2="13" y2="-8" width="0.1524" layer="21"/>
+<wire x1="-13" y1="8" x2="-13" y2="-8" width="0.1524" layer="21"/>
+<wire x1="13" y1="8" x2="13" y2="-8" width="0.1524" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="NMOS">
@@ -1608,6 +1616,60 @@ Source: http://focus.ti.com/lit/ds/symlink/tlc27l2.pdf</description>
 <pin name="A" x="0" y="-5.08" visible="off" length="point"/>
 <text x="-2.54" y="-5.08" size="1.778" layer="94" rot="R90">&gt;NAME</text>
 <text x="5.08" y="-2.54" size="1.778" layer="94" rot="R90">&gt;VALUE</text>
+</symbol>
+<symbol name="DA-T263-101E">
+<wire x1="-8.382" y1="0" x2="7.62" y2="0" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="0" x2="7.62" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="6.858" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="6.858" y1="5.08" x2="6.858" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="6.858" y1="0.762" x2="6.35" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="6.35" y1="0.762" x2="6.35" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="6.35" y1="5.08" x2="5.588" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="5.588" y1="5.08" x2="5.588" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="5.588" y1="0.762" x2="5.08" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0.762" x2="5.08" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="4.318" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="4.318" y1="5.08" x2="4.318" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="4.318" y1="0.762" x2="3.81" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="0.762" x2="3.81" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="5.08" x2="3.048" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="3.048" y1="5.08" x2="3.048" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="3.048" y1="0.762" x2="2.54" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0.762" x2="2.54" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="5.08" x2="1.778" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="1.778" y1="5.08" x2="1.778" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="1.778" y1="0.762" x2="1.27" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0.762" x2="1.27" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="5.08" x2="0.508" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="5.08" x2="0.508" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0.762" x2="0" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="0" y1="0.762" x2="0" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="0" y1="5.08" x2="-0.762" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="5.08" x2="-0.762" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="0.762" x2="-1.27" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0.762" x2="-1.27" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="5.08" x2="-2.032" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-2.032" y1="5.08" x2="-2.032" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-2.032" y1="0.762" x2="-2.54" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0.762" x2="-2.54" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="-3.302" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-3.302" y1="5.08" x2="-3.302" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-3.302" y1="0.762" x2="-3.81" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-3.81" y1="0.762" x2="-3.81" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-3.81" y1="5.08" x2="-4.572" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-4.572" y1="5.08" x2="-4.572" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-4.572" y1="0.762" x2="-5.08" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="0.762" x2="-5.08" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="5.08" x2="-5.842" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-5.842" y1="5.08" x2="-5.842" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-5.842" y1="0.762" x2="-6.35" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-6.35" y1="0.762" x2="-6.35" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-6.35" y1="5.08" x2="-7.112" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-7.112" y1="5.08" x2="-7.112" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-7.112" y1="0.762" x2="-7.62" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-7.62" y1="0.762" x2="-7.62" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-7.62" y1="5.08" x2="-8.382" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-8.382" y1="5.08" x2="-8.382" y2="0" width="0.1524" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -2162,6 +2224,18 @@ Source: http://focus.ti.com/lit/ds/symlink/tlc27l2.pdf</description>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DA-T263-101E">
+<gates>
+<gate name="G$1" symbol="DA-T263-101E" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DA-T263-101E">
 <technologies>
 <technology name=""/>
 </technologies>
