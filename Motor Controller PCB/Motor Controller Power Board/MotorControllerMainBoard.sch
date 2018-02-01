@@ -15265,11 +15265,11 @@ Source: www.kingbright.com</description>
 <part name="GND20" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="GND23" library="E-P-008-R1.2" deviceset="GND" device=""/>
 <part name="GND24" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="C36" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C1206" package3d_urn="urn:adsk.eagle:package:26140/1"/>
-<part name="C37" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C1206" package3d_urn="urn:adsk.eagle:package:26140/1"/>
-<part name="C38" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C1206" package3d_urn="urn:adsk.eagle:package:26140/1"/>
-<part name="C39" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C1206" package3d_urn="urn:adsk.eagle:package:26140/1"/>
-<part name="C40" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C1206" package3d_urn="urn:adsk.eagle:package:26140/1"/>
+<part name="C36" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1210" package3d_urn="urn:adsk.eagle:package:23619/2" value="22uF"/>
+<part name="C37" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1210" package3d_urn="urn:adsk.eagle:package:23619/2" value="22uF"/>
+<part name="C38" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1210" package3d_urn="urn:adsk.eagle:package:23619/2" value="22uF"/>
+<part name="C39" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1210" package3d_urn="urn:adsk.eagle:package:23619/2" value="22uF"/>
+<part name="C40" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1210" package3d_urn="urn:adsk.eagle:package:23619/2" value="22uF"/>
 <part name="GND25" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="U$12" library="Connector 732-3204" deviceset="732-3204-ND_CONNECTOR" device=""/>
 <part name="U$14" library="Connector 732-3204" deviceset="732-3204-ND_CONNECTOR" device=""/>
@@ -15284,11 +15284,9 @@ Source: www.kingbright.com</description>
 <part name="U$11" library="MotorControllerEagleLibrary" deviceset="AL5809-20S1-7" device=""/>
 <part name="PWR_CONFIRM" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/2" value="RED"/>
 <part name="GND22" library="E-P-008-R1.2" deviceset="GND" device=""/>
-<part name="U$10" library="MotorControllerEagleLibrary" deviceset="EEU-FM1H102B" device=""/>
 <part name="U$13" library="MotorControllerEagleLibrary" deviceset="EEU-FM1H102B" device=""/>
 <part name="U$18" library="MotorControllerEagleLibrary" deviceset="EEU-FM1H102B" device=""/>
 <part name="U$19" library="MotorControllerEagleLibrary" deviceset="EEU-FM1H102B" device=""/>
-<part name="U$20" library="MotorControllerEagleLibrary" deviceset="EEU-FM1H102B" device=""/>
 <part name="U$8" library="MotorControllerEagleLibrary" deviceset="AL5809-20S1-7" device=""/>
 <part name="LED2" library="SparkFun (2015_10_14 22_27_04 UTC)" deviceset="LED" device="1206"/>
 <part name="GND3" library="E-P-008-R1.2" deviceset="GND" device=""/>
@@ -15845,13 +15843,6 @@ minimum 2mA</text>
 </net>
 <net name="POWER_INPUT(+)" class="0">
 <segment>
-<pinref part="U$9" gate="G$1" pin="4"/>
-<wire x1="144.78" y1="83.82" x2="144.78" y2="71.12" width="0.1524" layer="91"/>
-<label x="129.54" y="68.58" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="MOTOR_OUTPUT_(+)" class="0">
-<segment>
 <pinref part="U$9" gate="G$1" pin="5"/>
 <wire x1="160.02" y1="83.82" x2="160.02" y2="71.12" width="0.1524" layer="91"/>
 <label x="160.02" y="68.58" size="1.778" layer="95"/>
@@ -15876,6 +15867,13 @@ minimum 2mA</text>
 <pinref part="C26" gate="G$1" pin="2"/>
 <wire x1="175.26" y1="109.22" x2="175.26" y2="106.68" width="0.1524" layer="91"/>
 <label x="175.26" y="104.14" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="MOTOR_OUTPUT_(+)" class="0">
+<segment>
+<pinref part="U$9" gate="G$1" pin="4"/>
+<wire x1="144.78" y1="83.82" x2="144.78" y2="71.12" width="0.1524" layer="91"/>
+<label x="129.54" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -16011,15 +16009,12 @@ minimum 2mA</text>
 <description>Input Filters</description>
 <plain>
 <text x="195.58" y="27.94" size="3.81" layer="94">Input Filters</text>
-<text x="114.3" y="96.52" size="1.778" layer="94">GRM31CR61H106KA12K
-Ceramic Capacitor
-
-10uF each
-50uF in total
+<text x="114.3" y="96.52" size="1.778" layer="94">22uF each
+110uF in total
 Very low ESL, Very low ESR</text>
 <text x="106.68" y="149.86" size="1.778" layer="94">1000uF Electro. Caps
 
-5mF in total
+3mF in total
 Low ESL, Low ESR</text>
 </plain>
 <instances>
@@ -16032,31 +16027,23 @@ Low ESL, Low ESR</text>
 <instance part="C39" gate="G$1" x="78.74" y="104.14"/>
 <instance part="C40" gate="G$1" x="91.44" y="104.14"/>
 <instance part="GND25" gate="1" x="99.06" y="86.36"/>
-<instance part="U$10" gate="G$1" x="40.64" y="157.48" rot="R270"/>
 <instance part="U$13" gate="G$1" x="53.34" y="157.48" rot="R270"/>
 <instance part="U$18" gate="G$1" x="66.04" y="157.48" rot="R270"/>
 <instance part="U$19" gate="G$1" x="78.74" y="157.48" rot="R270"/>
-<instance part="U$20" gate="G$1" x="91.44" y="157.48" rot="R270"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="INPUT_POWER(+)" class="0">
 <segment>
-<wire x1="40.64" y1="157.48" x2="40.64" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="160.02" x2="53.34" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="160.02" x2="66.04" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="160.02" x2="78.74" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="160.02" x2="91.44" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="160.02" x2="53.34" y2="157.48" width="0.1524" layer="91"/>
 <junction x="53.34" y="160.02"/>
 <wire x1="66.04" y1="160.02" x2="66.04" y2="157.48" width="0.1524" layer="91"/>
 <junction x="66.04" y="160.02"/>
 <wire x1="78.74" y1="160.02" x2="78.74" y2="157.48" width="0.1524" layer="91"/>
-<junction x="78.74" y="160.02"/>
-<wire x1="91.44" y1="160.02" x2="91.44" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="160.02" x2="27.94" y2="160.02" width="0.1524" layer="91"/>
-<junction x="40.64" y="160.02"/>
+<wire x1="53.34" y1="160.02" x2="27.94" y2="160.02" width="0.1524" layer="91"/>
 <label x="10.16" y="162.56" size="1.778" layer="95"/>
 <wire x1="27.94" y1="160.02" x2="22.86" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="160.02" x2="27.94" y2="109.22" width="0.1524" layer="91"/>
@@ -16082,36 +16069,26 @@ Low ESL, Low ESR</text>
 <junction x="40.64" y="109.22"/>
 <label x="86.36" y="111.76" size="1.778" layer="95"/>
 <label x="86.36" y="165.1" size="1.778" layer="95"/>
-<pinref part="U$10" gate="G$1" pin="POSITIVE"/>
 <pinref part="U$13" gate="G$1" pin="POSITIVE"/>
 <pinref part="U$18" gate="G$1" pin="POSITIVE"/>
 <pinref part="U$19" gate="G$1" pin="POSITIVE"/>
-<pinref part="U$20" gate="G$1" pin="POSITIVE"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
-<wire x1="40.64" y1="149.86" x2="40.64" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="144.78" x2="53.34" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="144.78" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="144.78" x2="78.74" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="144.78" x2="91.44" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="144.78" x2="96.52" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="144.78" x2="96.52" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="149.86" x2="53.34" y2="144.78" width="0.1524" layer="91"/>
-<junction x="53.34" y="144.78"/>
 <wire x1="66.04" y1="149.86" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
 <junction x="66.04" y="144.78"/>
 <wire x1="78.74" y1="149.86" x2="78.74" y2="144.78" width="0.1524" layer="91"/>
 <junction x="78.74" y="144.78"/>
-<wire x1="91.44" y1="149.86" x2="91.44" y2="144.78" width="0.1524" layer="91"/>
-<junction x="91.44" y="144.78"/>
 <pinref part="GND24" gate="1" pin="GND"/>
 <wire x1="96.52" y1="144.78" x2="96.52" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="U$10" gate="G$1" pin="NEGATIVE"/>
 <pinref part="U$13" gate="G$1" pin="NEGATIVE"/>
 <pinref part="U$18" gate="G$1" pin="NEGATIVE"/>
 <pinref part="U$19" gate="G$1" pin="NEGATIVE"/>
-<pinref part="U$20" gate="G$1" pin="NEGATIVE"/>
 </segment>
 <segment>
 <pinref part="C36" gate="G$1" pin="2"/>
