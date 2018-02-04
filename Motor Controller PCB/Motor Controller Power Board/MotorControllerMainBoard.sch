@@ -15378,6 +15378,8 @@ Source: www.kingbright.com</description>
 <part name="U$25" library="MotorControllerEagleLibrary" deviceset="LTN20069" device=""/>
 <part name="U$24" library="MotorControllerEagleLibrary" deviceset="DA-T263-101E" device=""/>
 <part name="SV1" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-1" device="" package3d_urn="urn:adsk.eagle:package:8339/1"/>
+<part name="U$10" library="MotorControllerEagleLibrary" deviceset="EEU-FM1H102B" device=""/>
+<part name="SV3" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA04-1" device="" package3d_urn="urn:adsk.eagle:package:8337/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -15441,6 +15443,7 @@ Connected HERE</text>
 <instance part="U$23" gate="G$1" x="35.56" y="144.78"/>
 <instance part="SV2" gate="1" x="266.7" y="137.16" rot="R180"/>
 <instance part="SV1" gate="G$1" x="266.7" y="172.72" rot="R180"/>
+<instance part="SV3" gate="1" x="254" y="137.16" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -16121,6 +16124,7 @@ Low ESL, Low ESR</text>
 <instance part="U$13" gate="G$1" x="53.34" y="157.48" rot="R270"/>
 <instance part="U$18" gate="G$1" x="66.04" y="157.48" rot="R270"/>
 <instance part="U$19" gate="G$1" x="78.74" y="157.48" rot="R270"/>
+<instance part="U$10" gate="G$1" x="88.9" y="157.48" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -16163,13 +16167,18 @@ Low ESL, Low ESR</text>
 <pinref part="U$13" gate="G$1" pin="POSITIVE"/>
 <pinref part="U$18" gate="G$1" pin="POSITIVE"/>
 <pinref part="U$19" gate="G$1" pin="POSITIVE"/>
+<pinref part="U$10" gate="G$1" pin="POSITIVE"/>
+<wire x1="78.74" y1="160.02" x2="88.9" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="160.02" x2="88.9" y2="157.48" width="0.1524" layer="91"/>
+<junction x="78.74" y="160.02"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <wire x1="53.34" y1="144.78" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="144.78" x2="78.74" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="144.78" x2="96.52" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="144.78" x2="88.9" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="144.78" x2="96.52" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="149.86" x2="53.34" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="149.86" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
 <junction x="66.04" y="144.78"/>
@@ -16180,6 +16189,9 @@ Low ESL, Low ESR</text>
 <pinref part="U$13" gate="G$1" pin="NEGATIVE"/>
 <pinref part="U$18" gate="G$1" pin="NEGATIVE"/>
 <pinref part="U$19" gate="G$1" pin="NEGATIVE"/>
+<pinref part="U$10" gate="G$1" pin="NEGATIVE"/>
+<wire x1="88.9" y1="149.86" x2="88.9" y2="144.78" width="0.1524" layer="91"/>
+<junction x="88.9" y="144.78"/>
 </segment>
 <segment>
 <pinref part="C36" gate="G$1" pin="2"/>
