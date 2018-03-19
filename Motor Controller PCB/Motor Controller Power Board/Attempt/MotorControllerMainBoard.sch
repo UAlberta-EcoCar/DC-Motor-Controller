@@ -405,6 +405,27 @@ by exp-lbrs.ulp</description>
 <wire x1="-2.5" y1="-3.86" x2="30.5" y2="-3.86" width="0.1524" layer="21"/>
 <wire x1="30.5" y1="-3.86" x2="30.5" y2="19.04" width="0.1524" layer="21"/>
 <pad name="ON/OFF" x="0" y="7.62" drill="1.9"/>
+<wire x1="7.62" y1="15.24" x2="7.62" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="7.62" y1="15.24" x2="2.54" y2="15.24" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="15.24" x2="2.54" y2="19.05" width="0.1524" layer="21"/>
+<wire x1="25.4" y1="19.05" x2="25.4" y2="13.97" width="0.1524" layer="21"/>
+<wire x1="25.4" y1="13.97" x2="17.272" y2="13.97" width="0.1524" layer="21"/>
+<wire x1="17.272" y1="13.97" x2="17.272" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="17.272" y1="-1.27" x2="7.62" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="8.89" y1="1.27" x2="16.51" y2="8.89" width="0.1524" layer="21"/>
+<wire x1="8.89" y1="3.81" x2="16.51" y2="11.43" width="0.1524" layer="21"/>
+<wire x1="8.89" y1="6.35" x2="20.32" y2="17.78" width="0.1524" layer="21"/>
+<wire x1="8.89" y1="8.89" x2="17.78" y2="17.78" width="0.1524" layer="21"/>
+<wire x1="20.32" y1="15.24" x2="22.86" y2="17.78" width="0.1524" layer="21"/>
+<wire x1="22.86" y1="15.24" x2="24.13" y2="16.51" width="0.1524" layer="21"/>
+<wire x1="15.24" y1="0" x2="16.51" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="12.7" y1="0" x2="16.51" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="10.16" y1="0" x2="16.51" y2="6.35" width="0.1524" layer="21"/>
+<wire x1="8.89" y1="11.43" x2="15.24" y2="17.78" width="0.1524" layer="21"/>
+<wire x1="8.89" y1="13.97" x2="12.7" y2="17.78" width="0.1524" layer="21"/>
+<wire x1="8.89" y1="16.51" x2="10.16" y2="17.78" width="0.1524" layer="21"/>
+<wire x1="6.35" y1="16.51" x2="7.62" y2="17.78" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="16.51" x2="5.08" y2="17.78" width="0.1524" layer="21"/>
 </package>
 <package name="SMB-DIODE">
 <description>&lt;b&gt;Diode&lt;/b&gt;&lt;p&gt;
@@ -12944,7 +12965,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
-<library name="SparkFun-Connectors" urn="urn:adsk.eagle:library:513">
+<library name="SparkFun-Connectors">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
 In this library you'll find connectors and sockets- basically anything that can be plugged into or onto.&lt;br&gt;&lt;br&gt;
 We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
@@ -12953,16 +12974,8 @@ We've spent an enormous amount of time creating and checking these footprints an
 &lt;br&gt;&lt;br&gt;
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="DB9" urn="urn:adsk.eagle:footprint:37626/1" library_version="1">
-<description>&lt;h3&gt;9 Pin Serial Connector - Female PCB Mount Right Angle&lt;/h3&gt;
-0.318" style. 
-&lt;p&gt;Specifications:
-&lt;ul&gt;&lt;li&gt;Pin count:11&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=”https://www.sparkfun.com/datasheets/Prototyping/Connectors/DB9-PCB.pdf”&gt;Datasheet referenced for footprint&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Example device(s):
-&lt;ul&gt;&lt;li&gt;DB9&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
+<package name="DB9">
+<description>&lt;b&gt;SUB-D&lt;/b&gt;</description>
 <wire x1="-8.128" y1="15.299" x2="-7.62" y2="15.807" width="0.2032" layer="51" curve="-90"/>
 <wire x1="7.62" y1="15.807" x2="8.128" y2="15.299" width="0.2032" layer="51" curve="-90"/>
 <wire x1="-15.4" y1="-2.8" x2="-15.4" y2="2.54" width="0.2032" layer="21"/>
@@ -12987,19 +13000,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pad name="9" x="4.15" y="1.42" drill="1.016" diameter="1.8796"/>
 <pad name="G1" x="-12.5" y="0" drill="3.302" diameter="5.08"/>
 <pad name="G2" x="12.5" y="0" drill="3.302" diameter="5.08"/>
-<text x="-1.905" y="5.588" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
-<text x="-1.905" y="4.572" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
+<text x="-0.795" y="2.62" size="0.4064" layer="25" ratio="10">&gt;NAME</text>
+<text x="-0.69" y="3.415" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="DB9_MALE" urn="urn:adsk.eagle:footprint:37627/1" library_version="1">
-<description>&lt;h3&gt;9 Pin Serial Connector - Male PCB Mount Right Angle&lt;/h3&gt;
-0.318" style. 
-&lt;p&gt;Specifications:
-&lt;ul&gt;&lt;li&gt;Pin count:11&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=”http://www.4uconnector.com/online/object/4udrawing/15944.pdf”&gt;Datasheet referenced for footprint&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Example device(s):
-&lt;ul&gt;&lt;li&gt;DB9&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
+<package name="DB9_MALE">
+<description>&lt;b&gt;SUB-D&lt;/b&gt;</description>
 <wire x1="-8.128" y1="15.299" x2="-7.62" y2="15.807" width="0.2032" layer="51" curve="-90"/>
 <wire x1="7.62" y1="15.807" x2="8.128" y2="15.299" width="0.2032" layer="51" curve="-90"/>
 <wire x1="-15.4" y1="-2.8" x2="-15.4" y2="2.54" width="0.2032" layer="21"/>
@@ -13024,38 +13029,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pad name="6" x="4.15" y="1.42" drill="1.016" diameter="1.8796"/>
 <pad name="G1" x="-12.5" y="0" drill="3.302" diameter="5.08"/>
 <pad name="G2" x="12.5" y="0" drill="3.302" diameter="5.08"/>
-<text x="-1.905" y="5.588" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
-<text x="-1.905" y="4.572" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
+<text x="-0.795" y="2.62" size="0.4064" layer="25" ratio="10">&gt;NAME</text>
+<text x="-0.69" y="3.415" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
 </package>
 </packages>
-<packages3d>
-<package3d name="DB9" urn="urn:adsk.eagle:package:38025/1" type="box" library_version="1">
-<description>9 Pin Serial Connector - Female PCB Mount Right Angle
-0.318" style. 
-Specifications:
-Pin count:11
-
-Datasheet referenced for footprint
-Example device(s):
-DB9
-</description>
-</package3d>
-<package3d name="DB9_MALE" urn="urn:adsk.eagle:package:38021/1" type="box" library_version="1">
-<description>9 Pin Serial Connector - Male PCB Mount Right Angle
-0.318" style. 
-Specifications:
-Pin count:11
-
-Datasheet referenced for footprint
-Example device(s):
-DB9
-</description>
-</package3d>
-</packages3d>
 <symbols>
-<symbol name="F09G" urn="urn:adsk.eagle:symbol:37625/1" library_version="1">
-<description>&lt;h3&gt;DB9 Connector&lt;/h3&gt;
-Standard DB9 (D-Sub 9) serial connector. Can be used for CAN bus as well as RS485 and RS232.</description>
+<symbol name="F09G">
 <wire x1="-1.651" y1="3.429" x2="-1.651" y2="1.651" width="0.254" layer="94" curve="180" cap="flat"/>
 <wire x1="1.524" y1="1.651" x2="1.524" y2="3.429" width="0.254" layer="94" curve="180" cap="flat"/>
 <wire x1="-1.651" y1="5.969" x2="-1.651" y2="4.191" width="0.254" layer="94" curve="180" cap="flat"/>
@@ -13075,8 +13054,8 @@ Standard DB9 (D-Sub 9) serial connector. Can be used for CAN bus as well as RS48
 <wire x1="-2.5226" y1="-8.1718" x2="0" y2="-7.62" width="0.4064" layer="94"/>
 <wire x1="0" y1="-7.62" x2="3.0654" y2="-6.9494" width="0.4064" layer="94"/>
 <wire x1="-4.064" y1="-6.9312" x2="-2.5226" y2="-8.1719" width="0.4064" layer="94" curve="102.337599" cap="flat"/>
-<text x="-3.81" y="-8.382" size="1.778" layer="96" font="vector" align="top-left">&gt;VALUE</text>
-<text x="-3.81" y="8.636" size="1.778" layer="95" font="vector">&gt;NAME</text>
+<text x="-3.81" y="-10.795" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-3.81" y="8.89" size="1.778" layer="95">&gt;NAME</text>
 <pin name="1" x="-7.62" y="5.08" visible="pad" length="middle" direction="pas"/>
 <pin name="6" x="7.62" y="2.54" visible="pad" length="middle" direction="pas" rot="R180"/>
 <pin name="2" x="-7.62" y="2.54" visible="pad" length="middle" direction="pas"/>
@@ -13089,22 +13068,9 @@ Standard DB9 (D-Sub 9) serial connector. Can be used for CAN bus as well as RS48
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="DB9" urn="urn:adsk.eagle:component:38317/1" prefix="J" uservalue="yes" library_version="1">
-<description>&lt;h3&gt;DB9 Connector&lt;/h3&gt;
-Standard DB9 (D-Sub 9) serial connector. Can be used for CAN bus as well as RS485 and RS232. Footprint production proven.
-
-&lt;p&gt;&lt;/p&gt;
-&lt;b&gt;Here is the female version connector we sell at SparkFun:&lt;/b&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/429"&gt; 9 Pin Female Serial Connector - PCB Mount&lt;/a&gt; (PRT-00429)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;
-&lt;b&gt;This connector has been used on the following SparkFun products:&lt;/b&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/449"&gt;SparkFun RS232 Shifter - SMD&lt;/a&gt; (PRT-00449)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/8780"&gt; SparkFun RS232 Shifter SMD (No DB9)&lt;/a&gt; (PRT-08780)&lt;/li&gt;
-&lt;/ul&gt;</description>
+<deviceset name="DB9" prefix="J" uservalue="yes">
+<description>&lt;b&gt;DB9 Connector&lt;/b&gt;
+Standard DB9 (D-Sub 9) serial connector. Can be used for CAN bus as well as RS485 and RS232. Footprint production proven. Spark Fun Electronics SKU : PRT-00429</description>
 <gates>
 <gate name="G$1" symbol="F09G" x="0" y="0"/>
 </gates>
@@ -13121,9 +13087,6 @@ Standard DB9 (D-Sub 9) serial connector. Can be used for CAN bus as well as RS48
 <connect gate="G$1" pin="8" pad="8"/>
 <connect gate="G$1" pin="9" pad="9"/>
 </connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:38025/1"/>
-</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="PROD_ID" value="CONN-08194" constant="no"/>
@@ -13142,9 +13105,6 @@ Standard DB9 (D-Sub 9) serial connector. Can be used for CAN bus as well as RS48
 <connect gate="G$1" pin="8" pad="8"/>
 <connect gate="G$1" pin="9" pad="9"/>
 </connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:38021/1"/>
-</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="PROD_ID" value="CONN-09904" constant="no"/>
@@ -13349,7 +13309,7 @@ LilyPad 1206- DIO-09912&lt;br&gt;
 <part name="U$6" library="MotorControllerEagleLibrary" deviceset="KHHD004A2B" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="DB9" device="FEMALE" package3d_urn="urn:adsk.eagle:package:38025/1"/>
+<part name="J1" library="SparkFun-Connectors" deviceset="DB9" device="FEMALE"/>
 <part name="U$7" library="MotorControllerEagleLibrary" deviceset="SMBJ15CD" device=""/>
 <part name="U$20" library="MotorControllerEagleLibrary" deviceset="SMBJ15CD" device=""/>
 <part name="U$21" library="MotorControllerEagleLibrary" deviceset="SS110-TP" device=""/>
