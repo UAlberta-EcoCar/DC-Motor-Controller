@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.6.0">
+<eagle version="8.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -13455,11 +13455,6 @@ Connected HERE</text>
 <label x="246.38" y="50.8" size="1.778" layer="95"/>
 <pinref part="J1" gate="G$1" pin="7"/>
 </segment>
-<segment>
-<wire x1="259.08" y1="185.42" x2="226.06" y2="185.42" width="0.1524" layer="91"/>
-<label x="226.06" y="185.42" size="1.778" layer="95"/>
-<pinref part="SV2" gate="G$1" pin="3"/>
-</segment>
 </net>
 <net name="FET_DRIVER_SIGNAL" class="0">
 <segment>
@@ -13586,6 +13581,11 @@ Connected HERE</text>
 <pinref part="J1" gate="G$1" pin="8"/>
 <wire x1="246.38" y1="48.26" x2="274.32" y2="48.26" width="0.1524" layer="91"/>
 <label x="246.38" y="48.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="259.08" y1="185.42" x2="226.06" y2="185.42" width="0.1524" layer="91"/>
+<label x="226.06" y="185.42" size="1.778" layer="95"/>
+<pinref part="SV2" gate="G$1" pin="3"/>
 </segment>
 </net>
 </nets>
